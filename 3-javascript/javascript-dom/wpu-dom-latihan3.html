@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+      }
+
+      body {
+        text-align: center;
+        background-color: #ccc;
+      }
+
+      .container {
+        width: 600px;
+        margin: 10px auto;
+        border: 5px solid #fff;
+        overflow: auto;
+      }
+
+      .thumb {
+        width: 200px;
+        float: left;
+        border: 2px solid white;
+        box-sizing: border-box;
+      }
+
+      .thumb:hover {
+        opacity: 0.75;
+        cursor: pointer;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      .fade {
+        opacity: 0;
+        animation: fadeIn 0.5s forwards;
+        /* forwards berfungsi untuk mengehentikan animasi di keadaan terakhirnya */
+      }
+
+      .active {
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="img/1.jpg" class="jumbo" />
+      <div class="thumbnail">
+        <img src="img/1.jpg" class="thumb" />
+        <img src="img/2.jpg" class="thumb" />
+        <img src="img/3.jpg" class="thumb" />
+        <img src="img/4.jpg" class="thumb" />
+        <img src="img/5.jpg" class="thumb" />
+        <img src="img/6.jpg" class="thumb" />
+      </div>
+    </div>
+
+    <script>
+      const container = document.querySelector(".container");
+      const jumbo = document.querySelector(".jumbo");
+      const thumbs = document.querySelectorAll(".thumb");
+
+      container.addEventListener("click", function (e) {
+        if (e.target.className === "thumb") {
+          // const thumb = e.target.getAttribute("src")
+
+          // jumbo.setAttribute("src", `${thumb}`)
+
+          jumbo.src = e.target.src; // versi lebih simpel dari yang atas
+
+          // fitur animasi fade
+          jumbo.classList.add("fade"); // sebelumnya membuat class .fade di css, lihat css untuk lebih jelas
+
+          setTimeout(function () {
+            jumbo.classList.remove("fade");
+          }, 500); // berfungsi untuk menghilangkan class .fade dalam waktu yang ditentukan (500ms)
+          // kalau tidak dihilangkan, class .fade akan tetap ada walaupun kita sudah target item yang berbeda
+          // sehingga animasi fade tidak lagi terjadi, karena class nya sudah ada sebelum kita target item lain
+
+          // fitur item yang dipilih seperti saat hover
+          thumbs.forEach((thumb) => {
+            // if (thumb.classList.contains("active")) {
+            //   thumb.classList.remove("active")
+            // } // perulangan ini berfungsi untuk menghilangkan item mana saja yang memiliki class .active
+
+            // atau cara lain seperti dibawah
+            thumb.className = "thumb"; // mengubah semua class yang ada di thumbs menjadi class .thumb
+          });
+
+          // kemudian menambahkan class .active ke item yang ditargetkan saja
+          e.target.classList.add("active"); // sebelumnya membuat class .active di css, lihat css untuk lebih jelas
+        }
+      });
+    </script>
+  </body>
+</html>

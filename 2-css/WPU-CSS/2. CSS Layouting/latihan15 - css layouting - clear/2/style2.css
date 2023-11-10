@@ -1,0 +1,24 @@
+/* solusi kedua untuk masalah pada float */
+.container {
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+.kotak {
+    width: 80px;
+    height: 80px;
+    background-color: salmon;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    margin: 5px;
+    float: left;
+}
+
+/* solusi yang paling tepat untuk permasalahan float yaitu menggunakan property "clear" pada css */
+.clear {
+    clear: left;
+}

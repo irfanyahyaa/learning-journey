@@ -1,0 +1,40 @@
+.radius {
+    /* untuk membuat elips, ubah value "width" atau "height" lebih besar salah satunya, sehingga bentuk awal "div" nya bukan kotak melainkan persegi panjang (tetep mengubah "border-radius" menjadi 50%) */
+    width: 300px;
+    height: 300px;
+    background-color: salmon;
+    /* untuk membuat lingkaran, ubah value "border-radius" menjadi 50% */
+    /* diperlakukan seperti property "margin", sehingga kita dapat leluasa mengubah bentuk keempat sisinya */
+    border-radius: 40px;
+    /* text keluar telihat keluar dari "div" nya */
+    /* text-align: center; */
+    /* line-height: 300px; */
+}
+
+.img {
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 0 50% 50% 50%;
+    background-color: salmon;
+    /* dengan menggunakan property dibawah ini, kita dapat memperlakukan div sebagai sebuah frame foto */
+    background-image: url(sandhika.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/* cara kedua membuat frame foto */
+.img2 {
+    margin-top: 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50% 50% 50% 50%;
+    background-color: salmon;
+    overflow: hidden;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}

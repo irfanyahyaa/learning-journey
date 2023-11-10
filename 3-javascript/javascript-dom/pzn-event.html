@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+  </head>
+  <body>
+    <h1 id="text">Click Yellow Canvas</h1>
+    <div
+      id="canvas"
+      style="width: 500px; height: 500px; background-color: yellow"
+    ></div>
+    <script>
+      const text = document.getElementById("text");
+      const canvas = document.getElementById("canvas");
+
+      // parameter event mengembalikan data yang ada di dalam event onclick
+      // data-data yang terdapat pada event berbeda-beda tergantung eventnya
+      canvas.onclick = function (event) {
+        text.textContent = `You Click at (${event.x}, ${event.y})`;
+      };
+    </script>
+  </body>
+</html>

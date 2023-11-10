@@ -1,0 +1,16 @@
+/* masalah pada property float */
+.container {
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+    /* penggunaan overflow merupakan salah satu cara mengakali masalah yang terjadi pada float */
+    /* overflow: auto; */
+}
+
+img {
+    width: 150px;
+    margin: 5px;
+    /* dengan menambahkan property "float", kita dapat melakukan text wrapping pada elemen "p" terhadap element sebelumnya "img"  */
+    float: left;
+}

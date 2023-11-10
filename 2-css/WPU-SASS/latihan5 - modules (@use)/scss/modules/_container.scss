@@ -1,0 +1,18 @@
+// kita langsung memanggil file mixin di halaman yang membutuhkan. karena saat ini, file mixin.scss tidak global lagi
+// kita juga bisa menggunakan alias (as) di pemanggilan 
+@use "mixin" as m;
+
+.container {
+  // kemudian kita juga harus menggunakan namespace di depan property nya
+  @include m.flexBox(row-reverse, space-evenly);
+  width: 600px;
+  height: 400px;
+  background-color: #eaeaea;
+  .box {
+    width: 60px;
+    height: 60px;
+    background-color: #bada55;
+    text-align: center;
+    line-height: 60px;
+  }
+}

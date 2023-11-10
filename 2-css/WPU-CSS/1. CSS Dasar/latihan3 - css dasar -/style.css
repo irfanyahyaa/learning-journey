@@ -1,0 +1,22 @@
+h1 {
+    font-size: 150px;
+    color: skyblue;
+    text-decoration: line-through;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+h2 {
+    color: rgb(20, 100, 8);
+}
+
+p {
+    color: #000000;
+    text-align: justify;
+    text-indent: 100px;
+    word-spacing: 10px;
+}
+
+a {
+    text-decoration: none;
+}

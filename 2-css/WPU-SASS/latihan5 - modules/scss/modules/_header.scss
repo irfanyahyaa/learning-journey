@@ -1,0 +1,11 @@
+// modules untuk style .header
+.header ul {
+  @include inlineList();
+  li {
+    background-color: black;
+    padding: 0.7em;
+    a {
+      color: white;
+    }
+  }
+}

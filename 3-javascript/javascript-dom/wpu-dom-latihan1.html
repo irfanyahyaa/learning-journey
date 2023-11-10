@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Latihan 1</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        text-align: center;
+      }
+
+      .hijau-muda {
+        background-color: lightgreen;
+      }
+
+      .kotak {
+        width: 25px;
+        height: 25px;
+        margin: 10px auto;
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .green {
+        background-color: green;
+      }
+
+      .blue {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bermain dengan Warna</h1>
+    <button type="button" id="button">Favorite color</button>
+
+    <br />
+
+    <div class="kotak red"></div>
+    <!-- min dan max merupakan value dari input range di bawah -->
+    <input type="range" name="sRed" min="0" max="255" />
+    <div class="kotak green"></div>
+    <input type="range" name="sGreen" min="0" max="255" />
+    <div class="kotak blue"></div>
+    <input type="range" name="sBlue" min="0" max="255" />
+
+    <script>
+      const button = document.getElementById("button");
+
+      // Warna Kesukaan
+      button.addEventListener("click", function () {
+        // document.body.style.backgroundColor = "lightgreen"
+        document.body.classList.toggle("hijau-muda");
+      });
+
+      // Warna Acak
+      const randomButton = document.createElement("button");
+      randomButton.textContent = "Random Color";
+      randomButton.setAttribute("type", "button");
+      button.after(randomButton);
+
+      randomButton.addEventListener("click", function () {
+        const r = parseInt(Math.random() * 255 + 1);
+        const g = parseInt(Math.random() * 255 + 1);
+        const b = parseInt(Math.random() * 255 + 1);
+
+        document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+      });
+
+      // Warna dengan Slider
+      const sRed = document.querySelector("input[name=sRed]");
+      const sGreen = document.querySelector("input[name=sGreen]");
+      const sBlue = document.querySelector("input[name=sBlue]");
+
+      sRed.addEventListener("change", function () {
+        // event change berubah ketika slider keluar dari focus (click dilepas)
+        const sR = sRed.value;
+        const sG = sGreen.value;
+        const sB = sBlue.value;
+        document.body.style.backgroundColor = `rgb(${sR}, ${sG}, ${sB})`;
+      });
+
+      sGreen.addEventListener("input", function () {
+        // event "input" berubah secara real-time
+        const sR = sRed.value;
+        const sG = sGreen.value;
+        const sB = sBlue.value;
+        document.body.style.backgroundColor = `rgb(${sR}, ${sG}, ${sB})`;
+      });
+
+      sBlue.addEventListener("input", function () {
+        const sR = sRed.value;
+        const sG = sGreen.value;
+        const sB = sBlue.value;
+        document.body.style.backgroundColor = `rgb(${sR}, ${sG}, ${sB})`;
+      });
+
+      // Warna dengan Cursor
+      document.body.addEventListener("mousemove", function (event) {
+        // posisi mouse
+        // console.log(event.clientX);
+        // console.log(event.clientY);
+
+        // ukuran browser
+        // console.log(window.innerWidth);
+
+        const xPos = parseInt((event.clientX / window.innerWidth) * 255);
+        const yPos = parseInt((event.clientY / window.innerHeight) * 255);
+        const rBlue = parseInt(Math.random() * 255 + 1);
+
+        document.body.style.backgroundColor = `rgb(${xPos}, ${yPos}, ${100})`;
+      });
+    </script>
+  </body>
+</html>

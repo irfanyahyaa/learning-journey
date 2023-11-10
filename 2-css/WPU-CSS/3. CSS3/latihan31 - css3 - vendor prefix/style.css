@@ -1,0 +1,11 @@
+body {
+    text-align: center;
+}
+
+img {
+    width: 500px;
+    /* pada saat itu property filter belum bisa digunakan pada google chrome */
+    /* vendor prefix berguna untuk mengaplikasikan property css yang belum bisa digunakan di browser tertentu agar dapat digunakan. untuk mengecek bisa ke shouldiprefix.com, caniuse.com, dan pleeease.io/play (lebih praktis, tinggal ketik code dan copas) */
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}

@@ -1,0 +1,14 @@
+// kita langsung memanggil file mixin di halaman yang   membutuhkan. karena saat ini, file mixin.scss tidak global lagi
+@use "mixin" as m;
+
+.header ul {
+  // kemudian kita juga harus menggunakan namespace di depan property nya
+  @include m.inlineList();
+  li {
+    background-color: black;
+    padding: 0.7em;
+    a {
+      color: white;
+    }
+  }
+}

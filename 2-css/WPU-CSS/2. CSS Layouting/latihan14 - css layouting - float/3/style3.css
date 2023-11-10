@@ -1,0 +1,35 @@
+.container {
+    width: 800px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+.kiri {
+    width: 100px;
+    height: 500px;
+    background-color: salmon;
+    float: left;
+    margin-bottom: 10px;
+    /* jika suatu saat ingin menambahkan padding atau margin pada element, pastikan untuk menyesuaikan nilai "width" nya. jika tidak, maka posisi element akan berantakan */
+    padding: 10px;
+    /* namun, hal tersebut dapat diakali dengan menggunakan property "box-sizing" */
+    /* box-sizing: border-box    ; */
+}
+
+.tengah {
+    width: 500px;
+    height: 500px;
+    background-color: lightskyblue;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.kanan {
+    width: 200px;
+    height: 500px;
+    background-color: limegreen;
+    float: left;
+    margin-bottom: 10px;
+}
+

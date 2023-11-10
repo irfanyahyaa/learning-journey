@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute Operator Selector</title>
+  </head>
+  <body>
+    <div class="irfan">Irfan</div>
+    <div class="yahfanya">Yahya</div>
+    <div class="abdillah">Abdillah</div>
+
+    <script>
+      const list = document.querySelectorAll("div[class*=fan]"); // mengambil semua node yang memiliki attr [class]
+      // dengan value yang mengandung "fan"
+      console.info(list);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+/* contoh penggunaan value "type-gradient", "size-gradient", dan "position-gradient" */
+.gradient-farthest {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    background: radial-gradient(ellipse farthest-corner at top left, red, blue);
+}
+
+.gradient-closest {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    background: radial-gradient(circle closest-corner at 300px 20px, red, blue);
+}

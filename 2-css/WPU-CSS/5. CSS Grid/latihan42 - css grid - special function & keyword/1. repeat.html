@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid | Repeat</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+      }
+
+      .container {
+        width: 60%;
+        margin: 50px auto;
+        display: grid;
+        /* value repeat merupakan cara kita menyingkat code bila ingin beberapa columns memiliki nilai yang sama. dalam hal ini 4 kolom pertama besarnya 1 fr, dan 5 kolom sisanya besarnya 2 ft */
+        grid-template-columns: repeat(4, 1fr) repeat(5, 2fr);
+      }
+
+      .item {
+        background-color: rgb(138, 209, 254);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item:nth-child(even) {
+        background-color: rgb(255, 142, 142);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+    </div>
+  </body>
+</html>

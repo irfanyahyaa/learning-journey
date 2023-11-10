@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nodelist</title>
+  </head>
+  <body>
+    <ul id="menu1">
+      <!-- node 1 -->
+      <li id="first">First</li>
+      <!-- node 2 -->
+      <li id="second">Second</li>
+      <!-- node 3 -->
+      <li id="third">Third</li>
+    </ul>
+
+    <ul id="menu2">
+      <!-- node 4 -->
+      <li>Irfan</li>
+      <!-- node 5 -->
+      <li>Yahya</li>
+      <!-- node 6 -->
+      <li>Abdilah</li>
+    </ul>
+
+    <script>
+      const list = document.querySelectorAll("li");
+      console.info(list); // menghasilkan 6 nodes
+
+      const menu1 = document.getElementById("menu1").childNodes;
+      console.info(menu1); // menghasilkan 7 nodes, karena mengandung text
+
+      const menu2 = document.getElementById("menu2").childNodes;
+      console.info(menu2); // menghasilkan 7 nodes, karena mengandung text
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+p {
+    color: red;
+}
+
+/* Jika selector memiliki nilai yang lebih spesifik, makan style CSS akan mengutamakan hal tersebut */
+/* Urutan nya yaitu: 1. Inline, 2. ID, 3. Class, 4. Element HTML */
+#p1 {
+    color: red;
+}
+
+/* Jika selector yang dituliskan selevel, maka style CSS yang aktif adalah selector yang terakhir */
+p {
+    color:green;
+}
+
+/* nilai spesifiknya yaitu 0102 karena memiliki 1 nilai ID, dan 2 nilai HTML */
+ul#sarapan li {
+    color: green;
+}
+
+/* Jika selector kurang memiliki nilai spesifik yang lebih kecil, maka style CSS akan memprioritaskan nilai selector dengan nilai spesifik yang lebih besar */
+/* nilai spesifiknya yaitu 0010 karena memiliki 1 nilai Class */
+.favorit {
+    color: red;
+}
+
+/* nilai spesifiknya yaitu 0112 karena memiliki 1 nilai ID, 1 nilai Class, dan 2 nilai HTML */
+ul#sarapan li.favorit {
+    color: red;
+}

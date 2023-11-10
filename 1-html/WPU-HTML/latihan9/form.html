@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+<body>
+    <!-- Tag dalam form yang paling sering digunakan ada di bawah ini -->
+    <!-- Penggunaan tag label dan input biasanya di barengi dengan attribute for untuk tag label, dan attribut id untuk tag input -->
+    <form action="">
+        <label for="username">username : </label>
+        <input type="text" id="username">
+        
+        <br>
+        
+        <label for="password">password : </label>
+        <input type="password" id="password">
+        
+        <br>
+        
+        <!-- Agar radio button hanya dapat dipilih satu saja, digunakan attribute name dengan value yang sama -->
+        <input type="radio" id="pria" name="jeniskelamin"><label for="pria">pria</label>
+        <input type="radio" id="wanita" name="jeniskelamin"><label for="wanita">wanita</label>
+
+        <br>
+
+        <input type="checkbox" id="menyanyi"><label for="menyanyi">menyanyi</label>
+        <input type="checkbox" id="olahraga"><label for="olahraga">olahraga</label>
+        <input type="checkbox" id="ngoding"><label for="ngoding">ngoding</label>
+
+        <br>
+
+        <textarea></textarea>
+        
+        <br>
+
+        <!-- Untuk membuat Combo box atau Dropdown gunakan tag select yang diikuti tag option -->
+        <select>
+            <option>Bandung</option>
+            <option>Yogyakarta</option>
+            <option>Jakarta</option>
+        </select>
+
+        <br>
+    
+        <button type="submit">Kirim!</button>
+    </form>
+</body>
+</html>

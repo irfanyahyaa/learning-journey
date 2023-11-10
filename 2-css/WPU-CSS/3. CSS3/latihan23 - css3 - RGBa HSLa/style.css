@@ -1,0 +1,24 @@
+body {
+    background-image: url(img/pattern.jpg);
+    padding: 40px;
+}
+
+.satu {
+    width: 300px;
+    height: 300px;
+    /* property rgba memberi transparansi pada warna, sedangkan property opacity memberi transparansi pada element */
+    background-color: hsla(24, 100%, 68%, .5);
+    position: relative;
+}
+
+.dua {
+    width: 100px;
+    height: 100px;
+    /* dua element dapat overlap meskipun memiliki hubungan "parent-child" dengan menggunakan value "rgba" atau "hsla" */
+    background-color: rgba(0, 0, 255, .5);
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+
+}
+

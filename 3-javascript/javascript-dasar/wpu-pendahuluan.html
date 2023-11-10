@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendahuluan</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "montserrat";
+        font-size: 18px;
+      }
+
+      body {
+        margin: 50px 150px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 40px;
+      }
+
+      span {
+        margin-top: 30px;
+        position: absolute;
+        left: 10%;
+        right: 10%;
+        height: 5px;
+        background-color: #333;
+      }
+
+      h2 {
+        margin-top: 60px;
+      }
+
+      p {
+        line-height: 30px;
+      }
+
+      a:visited {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript - Pendahuluan</h1>
+    <span></span>
+    <h2>Instruksi:</h2>
+    <br />
+    <p>
+      1. Untuk mencoba Javascript kita dapat mengakses <b>console</b>, melalui
+      <b>inspect element</b> pada browser
+    </p>
+    <br />
+    <p>
+      2. Kita bisa menghapus aksi pada console dengan <b>klik kanan</b>, dan
+      <b>clear console</b>
+    </p>
+    <span></span>
+    <h2>Note:</h2>
+    <br />
+    <p>
+      1. Tipe data <b>Number</b> pada Javascript tidak memiliki
+      <b>integer (bilangan bulat)</b>
+    </p>
+    <br /><br />
+    <p>
+      2. Dapat menyimpan <b>angka tanpa desimal (integer)</b>, contoh: 10, 1500,
+      123456. Sebenernya yang diproses oleh Javascript adalah bilangan pecahan,
+      dan tingkat akurasi dari hal tersebut hanya sampai 15 digit saja
+    </p>
+    <p>
+      Contoh: untuk menyimpan angka <b>10</b> kita dapat menuliskan di console,
+      dan console pun mengembalikan angka <b>10</b> tadi. Begitu pun untuk
+      menyimpan angka <b>1500</b>, serta <b>123456</b>. Akan berbeda jika, kita
+      menuliskan lebih dari 16 digit angka. Angka yang akan ditampilkan oleh
+      Javascript menjadi tidak akurat karena terjadi pembulatan
+    </p>
+    <br /><br />
+    <p>
+      3. Dapat menyimpan <b>angka desimal (float)</b>. Notasi koma untuk
+      bilangan desimal dalam Javascript menggunakan titik (.). Kita dapat
+      menyimpan angka di belakang koma maksimal sebanyak 17 digit
+    </p>
+    <p>
+      Contoh: untuk menyimpan angka <b>3.14</b> kita dapat menuliskan di
+      console, dan console pun mengembalikan angka <b>3.14</b> tadi. Begitu pun
+      untuk menyimpan angka <b>0.5</b>, serta <b>100.00</b>
+    </p>
+    <br /><br />
+    <p>
+      4. Kita juga dapat melakukan <b>operasi matematika</b> pada bilangan
+      desimal, tapi terkadang nilai nya tidak selalu akurat
+    </p>
+    <p>
+      Contoh: ketika kita ingin menjumlahkan nilai <b>0.3</b> dengan nilai
+      <b>0.7</b> maka, akan menghasilkan nilai <b>1</b>. Berbeda ketika kita
+      ingin menjumlahkan nilai <b>0.2</b> dengan <b>0.1</b>, hasil yang kita
+      dapatkan yaitu <b>0.30000000000000004</b>. Ada bilangan pecahan yang cukup
+      kecil, sehingga bilangan tidak benar-benar persis seperti yang kita
+      inginkan
+    </p>
+    <br /><br />
+    <p>
+      5. Kita dapat pula menyimpan angka yang sangat besar dan sangat kecil
+      dengan <b>eksponen</b> (notasi nya e)
+    </p>
+    <p>
+      Contoh: ketika kita menyimpan angka <b>123e5</b> maka Javascript akan
+      mengembalikan angka <b>12300000</b>. Begitu pun ketika kita menyimpan
+      angka <b>123e-5</b> maka Javascript akan mengembalikan angka
+      <b>0.00123</b>. Notasi plus (+) pada eksponen menunjukkan angka nya tidak
+      desimal, sedangkan notasi minus (-) menunjukkan angkanya bernilai desimal
+    </p>
+    <br /><br />
+    <p>6. Kita dapat pula menyimpan angka bernilai <b>negatif</b></p>
+    <br /><br />
+    <p>
+      7. Jangan pernah mengawali angka dengan <b>0</b>. Karena Javascript akan
+      menerjemahkannya menjadi bilangan oktal. Begitu pula jika kita mengawali
+      angka dengan <b>0x</b>. Javascript akan memperlakukannya menjadi angka
+      heksadesimal
+    </p>
+    <p>
+      Contoh: jika kita menyimpan angka <b>022</b>, Javascript akan
+      menerjemahkannya menjadi angka <b>18</b>, serta jika kita menyimpan angka
+      <b>0xFF</b>, Javascript akan mengembalikan angka tersebut menjadi
+      <b>255</b>
+    </p>
+    <br /><br />
+    <p>
+      8. Javascript juga memiliki angka spesial, yaitu <b>Infinity</b>,
+      <b>-Infinity</b>, dan <b>NaN (Not a Number)</b>
+    </p>
+    <p>
+      Contoh: jika kita membagi angka <b>positif</b> dengan angka <b>0</b>, maka
+      Javascript akan mengembalikan nilai <b>Infinity</b>. Jika kita membagi
+      angka <b>negatif</b> dengan <b>0</b> maka Javascript akan mengembalikan
+      nilai <b>-Infinity</b>. Sedangkan nilai <b>NaN</b> akan dikembalikan oleh
+      Javascript jika kita membagi angka <b>0</b> dengan angka <b>0</b>, atau
+      membagi suatu <b>angka</b> dengan <b>string</b>. Namun hasilnya akan
+      berbeda jika string tersebut berisi <b>angka</b>, Javascript akan
+      memperlakukan <b>string</b> tersebut sebagai suatu angka
+    </p>
+    <br /><br />
+    <p>
+      9. <b>Operator</b> dalam Javascript merupakan simbol yang digunakan untuk
+      melakukan operasi. Untuk melihat fungsi dari semua operator secara lengkap
+      bisa klik
+      <a
+        href="https://www.tutorialspoint.com/javascript/javascript_operators.htm"
+        target="_blank"
+        >disini</a
+      >
+    </p>
+    <br /><br />
+    <p>
+      10. Terdapat 3 jenis operator berdasarkan jumlah operand nya, yaitu
+      <b>Unary</b> (butuh 1 operand), <b>Binary</b> (butuh 2 operand), dan
+      <b>ternary</b> (butuh 3 operand)
+    </p>
+    <br /><br />
+    <p>
+      11. Operator Aritmatika <b>(+, -, *, /, %)</b>. Pada operator Aritmatika,
+      Javascript menerapkan <b>Operator Presendence</b> (urutan operasi
+      matematika). Urutannya yaitu <b>(), *, /, +, - </b>
+    </p>
+    <p>
+      contoh: <b>1 + 2 * 3 - 4</b> akan menghasilkan <b>3</b>, karena mengikuti
+      aturan <b>Operator Presendence</b>. Jika ingin melakukan operasi berurut
+      dari kanan ke kiri maka <b>(1 + 2) * 3 - 4</b> akan menghasilkan <b>5</b>
+    </p>
+    <br /><br />
+    <p>
+      12. Operator Assignment <b>(=, +=, -=, *=, /=, %=)</b>. Fungsi dari
+      Assignment <b>(=)</b> berfungsi untuk meng-assign suatu
+      <b>nilai</b> kepada <b>variable</b>. Ketika sudah melakukan
+      <b>Assignment</b>, maka komputer kita akan mengingat aksi tersebut,
+      meskipun kita melakukan <b>Clear Console</b>
+    </p>
+    <p>
+      contoh: <b>var x</b> yaitu kita mendeklarasikan sebuah variable bernama
+      <b>x</b>, kemudian <b>x = 10</b> yaitu kita menugaskan operand yang
+      sebelah kanan <b>(10)</b> ke dalam operand yang sebelah kiri <b>(x)</b>.
+      Maka, ketika kita memanggil variable <b>x</b>, Javascript akan menampilkan
+      nilai <b>10</b>. Jika kita mendeklarasikan kembali variable <b>x</b>, maka
+      nilai lama <b>(10)</b> akan digantikan dengan nilai barunya
+    </p>
+    <br /><br />
+    <p>
+      13. Operator Comparison <b>(==, !=, ===, !==, >, <, >=, <=)</b>. Operator
+      comparison akan menghasilkan nilai <b>boolean (true atau false)</b>
+    </p>
+    <p>
+      contoh: ketika kita menjalankan perintah <b>10 == 10</b>, maka akan
+      menghasilkan nilai <b>true</b>. Untuk membandingkan nilai beserta tipe
+      data nya kita bisa menggunakan operator <b>===</b> dan <b>!==</b>. Ketika
+      kita menjalankan perintah <b>10 === "10"</b>, maka akan menghasilkan nilai
+      <b>false</b> karena kedua nilai tersebut memiliki tipe data yang berbeda
+    </p>
+    <br /><br />
+    <p>
+      14. Operator Logical <b>(&&, ||, !)</b>, arti dari masing-masing operator
+      secara berurut yaitu <b>AND, OR, dan NOT</b>
+    </p>
+    <p>
+      contoh: ketika kita ingin menjalankan perintah
+      <b>(x % 2 == 0) && (x < 10)</b> dengan nilai <b>x = 8</b>, maka javascript
+      akan mengembalikan nilai <b>true</b>. Karena, kedua ekspresi diatas
+      bernilai <b>true</b>. Adapun, fungsi dari operator <b>!</b> adalah
+      membalikkan nilai suatu ekspresi, misal kita menjalankan perintah
+      <b>x < 20</b> dengan nilai <b>x = 10</b> menghasilkan nilai <b>true</b>.
+      Namun, jika kita menambahkan operator <b>!</b> sebelum ekspresi nya maka
+      hasilnya adalah <b>false</b>
+    </p>
+    <br /><br />
+    <p>
+      15. Operator String <b>(+)</b>, berfungsi untuk menggabungkan 2 operand
+      dengan tipe data string
+    </p>
+    <p>
+      contoh: ketika kita ingin menjalankan perintah
+      <b>"apple" + " " + "pen"</b>, maka javascript akan mengembalikan nilai
+      <b>"apple pen"</b>. Kita juga bisa menggabungkan tipe data
+      <b>string dan number</b>, misal kita ingin menjalankan perintah
+      <b>10 + 10 + "10"</b> akan menghasikan nilai <b>"2010"</b>. Berbeda ketika
+      kita ingin menjalankan perintah <b>"10" + 10 +10</b>, maka javascript akan
+      mengembalikan nilai <b>"101010"</b>
+    </p>
+    <br /><br />
+    <p>
+      16. Operator Typeof <b>(typeof(operand))</b>, berfungsi untuk mengecek
+      tipe data dari suatu variable
+    </p>
+    <p>
+      contoh: kita bisa mengecek tipe data 10 dengan menjalankan perintah
+      <b>typeof(10)</b>, maka javascript akan mengembalikan nilai <b>number</b>,
+      sedangkan jika kita menjalankan perintah <b>typeof("10")</b>, maka
+      javascript akan mengembalikan nilai <b>string</b>
+    </p>
+    <br /><br />
+    <p>
+      17. Operator Conditional
+      <b>(Condition) ? Value1 (when true) : Value2 (when false)</b>, merupakan
+      shorthand dari ekspresi <b>if-else</b>
+    </p>
+    <p>
+      contoh: kita bisa mengecek apakah suatu bilangan itu genap atau ganjil
+      dengan menjalankan perintah <b>(x & 2 == 0) ? "genap" : "ganjil"</b>. Jika
+      <b>x = 10</b>, maka nilai yang akan dikembalikan oleh javascript yaitu
+      <b>"genap"</b>, karena nilai modulus dari <b>10 : 2 = 0</b>, sehingga
+      kondisinya <b>true</b> dan mengembalikan nilai yang ada di sebelah kiri
+    </p>
+    <br /><br />
+    <p>
+      18. Tipe data <b>String</b> pada Javascript digunakan untuk
+      merepresentasikan <b>data tekstual (plain text)</b>. Kita bisa membuat
+      data bertipe <b>string</b> dengan membungkus data atau nilai kita dengan
+      <b>(" ")</b> atau <b>(' ')</b>. Agar data bertipe <b>String</b> yang kita
+      miliki aman dari error, sebaiknya data tersebut menggunakan
+      <b>escape character</b> jika memiliki karakter ("") atau (''). Kita bisa
+      mengecek seluruh <b>escape character</b> dengan klik
+      <a
+        href="https://www.tutorialspoint.com/escape-characters-in-javascript"
+        target="_blank"
+        >disini</a
+      >
+    </p>
+    <p>
+      contoh: kita bisa menjalankan perintah <b>"ini adalah hari jum\'at"</b>,
+      maka javascript akan mengembalikan nilainya menjadi
+      <b>"ini adalah hari jum'at"</b>
+    </p>
+    <br /><br />
+    <p>
+      19. Tipe data <b>Boolean</b> merupakan tipe data yang digunakan untuk
+      merepresentasikan logika <b>true</b> atau <b>false</b>. Boolean biasa
+      digunakan untuk statement <b>pengkondisian</b>, menentukan aksi yang
+      berbeda, dan mengatur <b>alur kendali</b> program. Javascript dapat
+      mengembalikan nilai <b>Boolean</b> dengan menggunakan fungsi dari
+      Javascript itu sendiri, yaitu <b>Boolean(nilai)</b>. Dalam tipe data
+      <b>Boolean</b> terdapat nilai <b>Truthy</b> yang mengembalikan nilai
+      <b>true</b> dan <b>Falsy</b> yang mengembalikan nilai <b>false</b>. Kita
+      bisa mengecek nilai <b>Truthy</b> di link
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy"
+        target="_blank"
+        >berikut</a
+      >, dan nilai <b>Falsy</b> di link
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy"
+        target="_blank"
+        >berikut</a
+      >
+    </p>
+    <br /><br />
+    <p>
+      20. <b>Variable</b> merupakan sebuah <b>'tempat/wadah'</b> yang memiliki
+      nama, yang digunakan untuk menyimpan suatu <b>'nilai'</b>. Dalam suatu
+      <b>Variable</b> terdapat 3 proses yang kita lakukan yaitu
+      <b>Deklarasi</b>, <b>Inisialisasi</b>, dan <b>Assignment</b>.
+      <b>Deklarasi</b> merupakan cara kita mendaftarkan variable ke dalam
+      lingkup yang sesuai, <b>Inisialisasi</b> sendiri yaitu cara komputer untuk
+      menyediakan memori untuk variable yang sudah kita deklarasikan, sedangkan
+      <b>Assignment</b> yaitu proses menetapkan nilai yang spesifik ke dalam
+      variable. Dalam Javascript, terdapat 3 cara untuk mendeklarasikan sebuah
+      variable yaitu <b>var</b>, <b>let</b>, dan <b>const</b>. Ketika
+      mendeklarasikan sebuah variable kita tidak bisa mengawalinya dengan angka,
+      sepert <b>var 1boleh</b>, begitu juga kita tidak diperbolehkan untuk
+      membuat variable dengan menggunakan <b>Keyword & Reserve Word</b>. Untuk
+      melihat <b>Keyword & Reserve Word</b> secara lengkap bisa klik link
+      <a href="https://www.w3schools.com/js/js_reserved.asp" target="_blank"
+        >berikut</a
+      >
+    </p>
+    <p>
+      contoh: <b>var x;</b> merupakan proses <b>Deklarasi</b> dan
+      <b>Inisialisasi</b>, kemudian kita mendeklarasikan <b>x = 20;</b> yang
+      merupakan proses <b>Assignment</b>. Kita juga dapat menyingkat penulisan
+      dari sebuah variable dengan syntax berikut <br /><b
+        >var nama = "Irfan" <br />- - - umur = 23 <br />- - - lulus = true;</b
+      >
+    </p>
+    <script></script>
+  </body>
+</html>

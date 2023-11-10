@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid | MinMax</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+      }
+
+      .container {
+        width: 80%;
+        margin: 50px auto;
+        display: grid;
+        /* minmax berguna untuk menentukan ukuran minimal dan maksimal dari grid-track */
+        /* nilai minmax berarti nilai default dari grid-track nya yaitu 300px. apabila layar web mengecil, nilai maksimal nya yaitu 200px. setelah mencapai nilai tersebut grid yang diberi nilai minmax tidak akan mengecil lagi */
+        grid-template-columns: 1fr minmax(200px, 300px) 1fr;
+      }
+
+      .item {
+        background-color: rgb(138, 209, 254);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item:nth-child(even) {
+        background-color: rgb(255, 142, 142);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item">Irfan</div>
+      <div class="item">Yahya</div>
+      <div class="item">Abdillah</div>
+      <!-- <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div> -->
+    </div>
+  </body>
+</html>

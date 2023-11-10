@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node Type</title>
+  </head>
+  <body>
+    Irfan Yahya Abdillah
+    <!-- Ini Komentar -->
+    <h1>Ini Title</h1>
+
+    <script>
+      const nodes = document.body.childNodes;
+      for (const node of nodes) {
+        console.info(`${node} : ${node.nodeType}`); // nodeType ini mengembalikan nilai integer
+        // maka kita perlu mengacu pada dokumentasi untuk bisa memastikan dengan benar tipe dari sebuah node
+      }
+    </script>
+  </body>
+</html>

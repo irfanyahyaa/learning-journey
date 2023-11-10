@@ -1,0 +1,30 @@
+div {
+    width: 200px;
+    height: 200px;
+}
+
+.satu {
+    background-color: lightblue;
+}
+
+.dua {
+    background-color: violet;
+    /* static */
+    /* position dengan value "static" merupakan nilai default dari css, maka ketika kita men-set position dengan value "static" tidak akan terjadi perubahan yang berarti meskipun kita mencoba untuk mengubah value dari property "left", "top", "right", "bottom" */
+    /* position: static;
+    top: 30px;
+    left: 50px; */
+
+    /* relative */
+    /* ketika kita menggunakan property "position" dengan value "relative". maka kita dapat mengatur posisi relatif dari posisi element tersebut tanpa mempengaruhi element disekitarnya (tidak seperti float)*/
+    position: relative;
+    top: 30px;
+    left: 50px;
+
+}
+
+
+.tiga {
+    background-color: gold;
+}
+

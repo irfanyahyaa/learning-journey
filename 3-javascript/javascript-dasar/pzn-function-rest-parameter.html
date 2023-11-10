@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Rest Parameter</title>
+  </head>
+  <body>
+    <script>
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        document.writeln(`<p>Total ${name} is ${total}</p>`);
+      }
+
+      sum("Orange", 10, 20, 30, 14, 23, 6, 36, 13);
+      sum("Apple", 21, 3, 1, 4, 12, 4, 5, 23, 5, 23, 4, 254, 32);
+      sum("Banana", 15, 6, 4, 14, 76, 74, 1, 4, 234, 2);
+
+      const values = [10, 10, 10, 20];
+      sum("Test", values);
+      // Spread syntax berfungsi untuk mengubah data array menjadi rest parameter
+      sum("Test", ...values);
+
+      // Sebelum fitur rest parameter, ada fitur bernama arguments object
+      // Tetapi fitur ini sudah tidak direkomendasikan
+      // Karena kita tidak bisa menentukan parameter lainnya selain dari arguments object tadi
+      function oldSum() {
+        console.info(arguments);
+        let total = 0;
+        for (const argument of arguments) {
+          total += argument;
+        }
+        document.writeln(`<p>Total is ${total}</p>`);
+      }
+
+      oldSum(1, 2, 3, 4, 5);
+    </script>
+  </body>
+</html>

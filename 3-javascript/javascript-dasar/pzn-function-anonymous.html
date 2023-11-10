@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Anonymous</title>
+  </head>
+  <body>
+    <script>
+      // Function anonymous lebih ringkas dibanding function biasa
+      // Digunakan ketika ada kasus yang membutuhkan function yang ringkas, dan tidak digunakan kembali
+      // Karena perlu menulis ulang function untuk digunakan kembali
+
+      // Membuat function anonymous sebagai value
+      const say = function (name) {
+        document.writeln(`<p>Hello ${name}</p>`);
+      };
+
+      say("Irfan");
+      say("Yahya");
+
+      function giveMeName(callback) {
+        callback("Irfan");
+      }
+
+      giveMeName(say);
+
+      // Membuat function anonymous sebagai parameter
+      giveMeName(function (name) {
+        document.writeln(`<p>Hi ${name}</p>`);
+      });
+
+      giveMeName(function (name) {
+        document.writeln(`<p>Hi ${name}</p>`);
+      });
+    </script>
+  </body>
+</html>

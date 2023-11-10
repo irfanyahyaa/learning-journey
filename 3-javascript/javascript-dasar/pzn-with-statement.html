@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>With Statement</title>
+  </head>
+  <body>
+    <script>
+      // Membuat scope lebih kecil
+      const person = {
+        firstName: "Irfan",
+        middleName: "Yahya",
+        lastName: "Abdilah",
+      };
+
+      console.info(person.firstName);
+      console.info(person.middleName);
+      console.info(person.lastName);
+
+      // Meski fiturnya cukup menarik, tapi tidak begitu direkomendasikan
+      // Karena membuat code menjadi ambigu
+      const firstName = "Budi";
+      const lastName = "Nugraha";
+
+      // Gagal memanggil "Budi", dan "Nugraha" karena scope diperkecil
+      // Seolah-olah kita dihilangkan aksesnya kepada variable tersebut
+      with (person) {
+        console.info(firstName); // Niatnya ingin "Budi"
+        console.info(middleName);
+        console.info(lastName); // Niatnya ingin "Nugraha"
+      }
+    </script>
+  </body>
+</html>

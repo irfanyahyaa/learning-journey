@@ -1,0 +1,5 @@
+// command di terminal vs code untuk menggunakan property @use
+// sass scss/main.scss css/main.css
+@use "modules/header";
+@use "modules/container";
+@use "modules/footer";

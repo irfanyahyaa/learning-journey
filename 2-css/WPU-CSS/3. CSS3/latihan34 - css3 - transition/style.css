@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 900px;
+    margin: 50px auto;
+    border: 5px solid black;
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: salmon;
+    text-align: center;
+    line-height: 100px;
+    margin: 5px 0;
+}
+
+/* secara default property "transition" memiliki value "all", bisa dicustom sesuai kebutuhan */
+/* kita bisa custom untuk setiap property yang di transisi */
+.kotak1 {transition: margin-left 3s, transform 3s 2s, background-color 1s 3s;}
+
+/* secara default property "transition" memiliki value "ease" sebagai timing function nya, value lain yaitu "ease-in", "ease-out", "ease-in-out", "linear" dan "cubic-bezier" */
+.kotak2 {transition: all 3s ease-in .5s;}
+
+.kotak3 {transition: all 3s ease-out .5s;}
+
+.kotak4 {transition: all 3s ease-in-out .5s;}
+
+.kotak5 {transition: all 3s linear .5s;}
+
+.kotak6 {transition: all 3s cubic-bezier(.2, -.5, .8, 1.25) .5s;}
+
+.container:hover .kotak {
+    transform: rotate(720deg);
+    margin-left: 800px;
+    background-color: royalblue;
+}

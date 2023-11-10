@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Traversal</title>
+    <style>
+      body {
+        margin: 50px;
+        font-family: arial;
+        background-color: #666;
+      }
+
+      .container {
+        width: 900px;
+        margin: auto;
+      }
+
+      .card {
+        display: inline-block;
+        width: 220px;
+        padding: 0 80px;
+        height: 80px;
+        font-size: 16px;
+        line-height: 80px;
+        border-radius: 40px;
+        background-color: #f1f1f1;
+        margin: 20px;
+        position: relative;
+        text-align: center;
+      }
+
+      .card img {
+        float: left;
+        margin: 0 10px 0 -80px;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      .card a {
+        text-decoration: none;
+      }
+
+      .card .nama,
+      .card .telp {
+        display: block;
+        line-height: 20px;
+        padding: 0 5px;
+      }
+
+      .card .nama {
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 20px;
+      }
+
+      .card .telp {
+        margin-left: 20px;
+        margin-top: 5px;
+        font-size: 16px;
+        color: #aaa;
+      }
+
+      .card .close {
+        font-size: 24px;
+        font-weight: bold;
+        color: #999;
+        position: absolute;
+        top: 0;
+        right: 30px;
+        cursor: pointer;
+      }
+
+      .card:hover .close {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img src="img/mikazuki.jpg" width="96" height="96" />
+        <span class="nama">Mikazuki Augus</span>
+        <span class="telp">08123456789</span>
+        <span class="close">×</span>
+      </div>
+
+      <div class="card">
+        <img src="img/barbatos1.jpg" width="96" height="96" />
+        <span class="nama">Barbator Lupus Rex</span>
+        <span class="telp">08123456789</span>
+        <span class="close">×</span>
+      </div>
+
+      <div class="card">
+        <img src="img/pxfuel.jpg" width="96" height="96" />
+        <span class="nama">Yatora Yaguchi</span>
+        <span class="telp">08123456789</span>
+        <span class="close">×</span>
+      </div>
+
+      <div class="card">
+        <img
+          src="img/artworks-000123105989-jla8r5-t500x500.jpg"
+          width="96"
+          height="96"
+        />
+        <span class="nama">Adit</span>
+        <span class="telp">08123456789</span>
+        <span class="close">×</span>
+      </div>
+    </div>
+
+    <script>
+      // menempelkan addEventListener di tag yang dituju bisa menjadi kurang efektif
+      // ketika element ditambahkan secara real-time
+      // cara yang lebih efektif yaitu dengan menempelkan addEventListener ke pembungkus terluar
+      // kemudian mencari element yang dituju dengan dom traversal
+
+      const container = document.querySelector(".container");
+
+      container.addEventListener("click", function (e) {
+        if (e.target.className == "close") {
+          e.target.parentElement.style.display = "none";
+        } else {
+          console.log(e.target)
+        }
+      });
+    </script>
+  </body>
+</html>

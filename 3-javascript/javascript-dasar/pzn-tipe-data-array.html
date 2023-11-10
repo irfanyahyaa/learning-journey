@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data Array</title>
+  </head>
+  <body>
+    <script>
+      let array = [];
+
+      let arrayNama = ["Irfan", "Yahya", "Abdillah"];
+
+      const names = [];
+      names.push("Irfan");
+      names.push("Yahya", "Abdillah");
+      names.push("Zada", "Mumtazul", "Afif");
+
+      console.table(names);
+
+      console.info(names[0]);
+      console.info(names[1]);
+      console.info(names[2]);
+
+      names[0] = "Programmer";
+      names[1] = "Zaman";
+      names[2] = "Now";
+
+      console.table(names);
+
+      // Hanya menghapus data, tanpa menghapus index
+      delete names[3];
+
+      console.table(names);
+
+      names.push("Irfan Lagi");
+
+      console.table(names);
+
+      // Setelah data dihapus, index masih bisa diakses kembali
+      names[3] = "Ada lagi";
+      names.push(1, 2, 3, 4, 5);
+      // Karena tidak memiliki batasan, kita bisa memasukkan data array ke dalan array
+      names.push(["Irfan", "Yahya", "Abdillah"]);
+
+      console.table(names);
+    </script>
+  </body>
+</html>

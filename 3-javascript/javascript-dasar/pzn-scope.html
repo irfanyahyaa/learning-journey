@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+  </head>
+  <body>
+    <script>
+      // Global scope
+      let counter = 0;
+
+      // Global scope
+      function hitMe() {
+        // Local scope hitMe
+        counter++;
+      }
+
+      // Global scope
+      function other() {
+        // Local scope other
+      }
+
+      hitMe();
+      hitMe();
+
+      console.info(counter);
+
+      function first() {
+        // Local scope first
+        let firstVariable = "First";
+
+        function firstNested() {
+          console.info(firstVariable);
+          let firstNestedVariable = "First Nested";
+        }
+
+        firstNested();
+        console.info(firstNestedVariable); // Error
+      }
+
+      function second() {
+        // Local scope second
+        // Meskipun jenis nya local scope, kita tidak bisa mengakses data antar local scope
+        let secondVariable = "Second"; // Error
+      }
+
+      first();
+      second();
+
+      // Global scope
+      console.info(firstVariable); // Error
+      console.info(secondVariable); // Error
+    </script>
+  </body>
+</html>

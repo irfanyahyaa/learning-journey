@@ -1,0 +1,32 @@
+.navigasi {
+    background-color: antiquewhite;
+}
+
+.main {
+    background-color: bisque;
+}
+
+.main span {
+    background-color: salmon
+}
+
+h1, h2, p {
+    background-color: whitesmoke;
+}
+
+a {
+    background-color: azure;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.navigasi li  {
+    background-color: lightgreen;
+    display: inline;
+}
+
+ul li a {
+    background-color: chocolate;
+    display: inline;
+}

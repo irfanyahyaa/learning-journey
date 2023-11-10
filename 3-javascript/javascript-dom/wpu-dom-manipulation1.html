@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <style>
+      * {
+        border: 2px solid #dedede;
+        padding: 15px;
+        margin: 15px;
+      }
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        max-width: 600px;
+        margin: 30px auto;
+        font-family: sans-serif;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="judul">Hello World</h1>
+    <div id="container">
+      <section id="a">
+        <p class="p1">paragraf 1</p>
+        <a href="http://instagram.com/sandhikagalih"
+          >Instagram Sandhika Galih</a
+        >
+        <p class="p2">paragraf 2</p>
+        <p class="p3">paragraf 3</p>
+      </section>
+      <section id="b">
+        <p>paragraf 4</p>
+        <ul>
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ul>
+      </section>
+    </div>
+
+    <script>
+      // manipulasi element
+
+      // element.innerHTML
+      // berfungsi untuk mengubah keseluruhan di tag html
+      const judul = document.getElementById("judul");
+      // mengubah isi seluruh tag html (section id="a") menjadi
+      judul.innerHTML = "<em>Irfan Yahya</em>";
+
+      const sectionB = document.querySelector("section#b"); // carikan section dengan id = a
+      // mengubah isi seluruh tag html (section id="a") menjadi
+      sectionB.innerHTML = "Hello World!";
+
+      // // element.style.<propertiCSS>
+      // // berfungsi untuk mengubah style di tag html, seperti css
+      // judul.style.color = "indigo";
+      // judul.style.backgroundColor = "khaki";
+
+      // // element.setAttribute()
+      // // berfungsi untuk menambah class
+      // // tapi tidak berfungsi ketika sebuah tag sudah memiliki class
+      // // karena akan menimpa class yang sudah ada
+      // judul.setAttribute("name", "Irfan");
+      // const a = document.querySelector("section#a a");
+      // a.setAttribute("id", "link");
+
+      // // element.getAttribute()
+      // // coba di console website
+      // // a.getAttribute("href");
+      // // a.removeAttribute("href");
+
+      // const p2 = document.querySelector(".p2");
+
+      // // element.classList.<attribute>
+      // // add()
+      // p2.classList.add("coba"); // menambah class ke dalam suatu tag
+      // p2.classList.add("label"); // menambah class ke dalam suatu tag
+
+      // // remove()
+      // p2.classList.remove("label"); // menghapus class di dalam suatu tag
+
+      // // toggle()
+      // // membuat class layaknya tombol yang bisa di toggle
+      // document.body.classList.toggle("biru-muda");
+
+      // // item()
+      // p2.classList.add("satu");
+      // p2.classList.add("dua");
+      // p2.classList.add("tiga");
+
+      // // mengembalikan class dengan urutan ke 2 (dihitung mulai dari 0)
+      // p2.classList.item(2); // coba di console website
+
+      // // contains()
+      // // mengembalikan nilai boolean
+      // p2.classList.contains("dua"); // apakah dalam p2 terdapat class "dua"
+      // p2.classList.contains("empat"); // apakah dalam p2 terdapat class "empat"
+
+      // // replace()
+      // // mengganti isi class
+      // p2.classList.replace("tiga", "empat"); // mengganti class "tiga" menjadi "empat"
+    </script>
+  </body>
+</html>

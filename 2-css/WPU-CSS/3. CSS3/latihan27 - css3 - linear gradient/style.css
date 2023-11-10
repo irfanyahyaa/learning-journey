@@ -1,0 +1,15 @@
+.gradient-angle {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    background: linear-gradient(-90deg, rgba(255, 255, 0, 1), hsla(90, 80%, 10%));
+}
+
+.gradient-stop {
+    width: 600px;
+    height: 300px;
+    margin: 50px auto;
+    /* setelah diulik belum menemukan cara untuk menggunakan "color-stop" dengan kombinasi "rgba", dan "hsla" */
+    /* value "color-stop" berasa setelah warna dengan notasi persen (%) */
+    background: linear-gradient(90deg, red 63%, green 80%);
+}

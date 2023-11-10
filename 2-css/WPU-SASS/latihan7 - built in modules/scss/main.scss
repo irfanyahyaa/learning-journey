@@ -1,0 +1,82 @@
+// base
+$warna-dasar: salmon;
+
+h1 {
+  color: $warna-dasar;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+
+// built-in modules
+/* 
+adjust-color($color,
+  $red: null, $green: null, $blue: null,
+  $hue: null, $saturation: null, $lightness: null,
+  $whiteness: null, $blackness: null,
+  $alpha: null);
+*/
+
+// h1 {
+//   color: adjust-color($color: $warna-dasar, $red: -50, $green: 100, $blue: 100);
+// }
+
+// adjust-hue(%colorm $degree);
+// adjust-hue berfungsi untuk merubah posisi pada roda warna
+// h1 {
+//     color: adjust-hue$warna-dasar, 30deg);
+// }
+
+// complement($color);
+// complement berguna untuk merubah warna yang berlawanan 180 derajat dari warna yang dipilih
+// h1 {
+//     color: complement($warna-dasar);
+// }
+
+// darken($color, $amount)
+// darken berfungsi untuk menjauhi dari pusat roda warna (warna dasar dari suatu warna semakin pekat)
+// h1 {
+// color: darken($warna-dasar, 20%);
+// }
+
+// lighten($colorm, $amount)
+// sedangkan lighten berfungsi untuk mendekati ke pusat roda warna (warna dasar semakin pudar karena penambahan warna putih)
+// h1 {
+//     color: lighten($warna-dasar, 10%);
+// }
+
+// saturate($color, $amount)
+// berguna untuk mengatur kepekatan warna, sampai warna tidak dapat diatur lagi kepekatannya (karena masing-masing warna memiliki nilai default dari saturate nya)
+// h1 {
+//     color: saturate($warna-dasar, 30%);
+// }
+
+// desaturate($color, $amount)
+// warna dasar semakin hilang, sampai warna nya menjadi abu-abu
+// h1 {
+//   color: desaturate($warna-dasar, 50%);
+// }
+
+// grayscale($color)
+// fungsi nya sama seperti kita memberi nilai desaturate pada suatu warna sebanyak 100%
+// h1 {
+//     color: grayscale($warna-dasar);
+// }
+
+// mox($color1, $color2, $weight: 20%)
+// dengan memberikan nilai pada weight kita dapat mengatur berapa banya kuantitas warna yang dicampur. dari code diatas $color1 memiliki $weight: 20%, sedangkan $color2 sisanya atau 80%.
+// h1 {
+//   color: mix($warna-dasar, blue, 80%);
+// }
+
+// fade-in($color, $amount)
+// berfungsi untuk membuat yang warna yang tadinya transparan menjadi solid
+// h1 {
+//     color: fade-in(rgba(250, 128, 114, .2), 0.5);
+// }
+
+// fade-out($color, $amount)
+// berfungsi untuk membuat yang warna yang tadinya solid menjadi transparan
+h1 {
+  color: fade-out($warna-dasar, $amount: 0.4);
+}

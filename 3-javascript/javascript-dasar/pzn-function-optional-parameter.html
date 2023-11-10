@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Optional Paramer</title>
+  </head>
+  <body>
+    <script>
+      // Parameter dalam javascript bersifat optional
+      function sayHello(firstName, middleName, lastName) {
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      // Ketika kita tidak mengirim parameter pada sebuat function
+      // Javascript tidak akan error, melainkan mengembalikan value undefined
+      sayHello();
+      sayHello("Irfan");
+      sayHello("Irfan", "Yahya");
+      sayHello("Irfan", "Yahya", "Abdillah");
+      // Ketika parameter yang dikirim melebihi kebutuhan function
+      // Maka yang akan dieksekusi adalah sejumlah yang dibutuhkan
+      sayHello("Irfan", "Yahya", "Abdillah", "Zada");
+    </script>
+  </body>
+</html>

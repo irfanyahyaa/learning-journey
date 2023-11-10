@@ -1,0 +1,23 @@
+p {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* 
+    scale(angka), scaleX(angka), scaleY(angka)
+    rotate(n deg), rotateX(n deg), rotateY(n deg)
+    skew(n deg), skewX(n deg), skewY(n deg)
+    translate(px), translateX(px), translateY(px)
+*/
+
+.kotak {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    margin: 50px auto;
+    transition: .3s;
+}
+
+.kotak:hover {
+    transform: scale(2) rotateY(90deg);
+}

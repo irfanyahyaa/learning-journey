@@ -1,0 +1,26 @@
+.kotak {
+    width: 200px;
+    height: 200px;
+    background-color: salmon;
+    /* sebelum kita dapat menggunakan property "animation", kita perlu mengatur "@keyframe" terlebih dahulu */
+    /* ada beberapa value yang sama dengan "transition" */
+    /* value ke-4 yaitu "iteration", mengatur berapa kali kita melakukan pengulangan animasi */
+    /* value ke-5 yaitu "direction", mengatur bagaimana animasi akan berjalan. value nya "normal" (0%->100%), "reverse" (100%->0%), "alternate" (0%->100%->0%), "alternate-reverse"(100%->0%->100%) */
+    /* value ke-6 yaitu "fill-mode", mengatur kapan animasi akan di apply. value nya "none" (tidak akan apply sebelum animasi berjalan dan setelahnya), "forwards"(apply style pada keyframe akhir), "backwards"(apply style pada keyframe awal), "both"(apply style pada keyframe awal dan akhir) */
+    /* value ke-7 yaitu "play-state", mengatur agar animasi bisa di berhentikan ditengah jalan (menggunakan "javascript"), untuk mencoba bisa di web menggunakan inspect element */
+    animation: animasiKotak 3s ease infinite alternate forwards running;
+}
+
+@keyframes animasiKotak{
+    0% {
+        width: 200px;
+    }
+    50%{
+        width: 500px;
+        height: 200px;
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+    }
+}

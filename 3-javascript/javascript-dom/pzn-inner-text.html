@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inner Text</title>
+  </head>
+  <body>
+    <p id="content">
+      <script>
+        console.info("Hello World");
+      </script>
+      <b>Irfan</b> Yahya <i>Abdillah</i>
+    </p>
+
+    <script>
+      const content = document.getElementById("content");
+      console.info(content.textContent);
+      console.info(content.innerText); // innerText hanya menampilkan text yang sesungguhnya ditampilkan di browser
+      // dalam hal ini, text di dalam tag script tidak termasuk
+      // karena tidak akan ditampilkan ke dalam browser ketika di eksekusi
+      console.info(content.innerHTML); // innerHTML mengambil element mentah-mentah, termasuk tag htmlnya
+    </script>
+  </body>
+</html>

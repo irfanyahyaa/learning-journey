@@ -1,0 +1,55 @@
+// // CSS VARIABLES
+
+// :root {
+//     --primary-color: #fba124;
+//     --secondary-color: #fba142;
+//     --text-color: #124;
+// }
+
+// // how to use css variables
+// body {
+//     background-color: var(--primary-color);
+// }
+
+// h1 {
+//     color: var(--text-color);
+// }
+
+// p {
+//     color: var(--text-color);
+// }
+
+// // SASS VARIABLES
+
+// // dibawah merupakan variable global yang bisa diakses oleh element mana saja
+// $secondary-color: #fba142;
+// $text-color: #124;
+// // kita bisa membuat dua variable dengan nama yang sama, dengan syarat variable tersebut tidak sama-sama global ataupun local.
+// $primary-color: green;
+
+// body {
+//   // kita bisa membuat variable di dalam sebuah element (disebut sebagai variable local)
+//   // kita bisa juga memaksa sebuah variable local menjadi variable global dengan menambahkan command "!global" pada akhir value dari suatu variable
+//   $primary-color: #fba124;
+//   // sass memperlakukan - (dash) dengan underscore (_) dengan sama pada suatu variables
+//   background-color: $primary_color;
+// }
+
+// h1 {
+//   color: $primary-color;
+// }
+
+// MAP
+// $alert-danger: red;
+// $alert-success: green;
+// $alert-warning: orange;
+// diubah dengan map menjadi
+$alert: (
+  "danger": red,
+  "success": green,
+  "warning": orange,
+);
+
+h1 {
+  color: map-get($alert, "warning");
+}

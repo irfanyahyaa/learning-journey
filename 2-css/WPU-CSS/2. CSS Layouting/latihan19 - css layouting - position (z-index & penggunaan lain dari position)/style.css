@@ -1,0 +1,66 @@
+body {
+    height: 2000px;
+}
+
+div {
+    position: absolute;
+}
+
+.container {
+    width: 450px;
+    height: 450px;
+    margin: auto;
+    border: 5px solid green;
+    position: relative;
+    margin-top: 50px;
+}
+
+.satu {
+    width: 200px;
+    height: 200px;
+    background-color: salmon;
+    /* semakin besar nilai "z-index", semakin didahulukan element tersebut untuk terlihat oleh kita. kita dapat menaruh nilai 9999 agar suatu elemen tampil paling pertama */
+    z-index: 3;
+}
+
+.dua {
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    top: 100px;;
+    left: 100px;
+    z-index: 2;
+}
+
+.tiga {
+    width: 200px;
+    height: 200px;
+    background-color: royalblue;
+    top: 200px;
+    left: 200px;
+    /* kita dapat menggunakan nilai minus dalam menentukan nilai "z-index" */
+    z-index: -9999;
+}
+
+/* praktek pembuatan iklan yang kadang ada sebelum kita dapat mengakses website tersebut */
+.kotak {
+    background-color: black;
+    position: fixed;
+    /* kita dapat membuat sebuat element tanpa mendeklarasikan besarannya, dengan menggunakan property "top", "right", "bottom", "left". ini hanya bekerja jika kita element yang kita miliki berada pada state "non-static" ("absolute" dan "fixed")*/
+    top: 100px;
+    right: 100px;
+    bottom: 100px;
+    left: 100px;
+    opacity: .7;
+    z-index: 9999;
+}
+
+.close {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 50%;
+    top: -15px;
+    right: -15px;
+}

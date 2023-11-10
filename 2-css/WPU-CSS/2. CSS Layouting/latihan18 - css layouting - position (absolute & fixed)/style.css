@@ -1,0 +1,47 @@
+body {
+    height: 2000px;;
+}
+
+.container {
+    width: 600px;
+    height: 650px;
+    margin-top: 100px;
+    border: 10px solid green;
+    /* ketika container berada di posisi "non-static", maka kotak violet akan relatif terhadap container dibandingkan relatif terhadap window */
+    position: relative;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: poppins;
+}
+
+.satu {
+    background-color: lightblue;
+}
+
+.dua {
+    background-color: violet;
+    line-height: 200px;
+    position: absolute;
+    /* posisi dari property "position" relatif terhadap element parent terdekat nya, jika parent tersebut dalam posisi "non-static" juga */
+    top: 0;
+    left: 0;
+}
+
+
+.tiga {
+    background-color: gold;
+    height: 40px;
+    width: 100%;
+    /* position dengan nilai fixed memungkinkan kita untuk mengatur posisi element relatif terhadap window. biasanya digunakan untuk membuat navbar (navigation bar)  */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+

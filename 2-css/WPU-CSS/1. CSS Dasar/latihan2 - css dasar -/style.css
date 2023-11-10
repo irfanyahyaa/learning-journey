@@ -1,0 +1,13 @@
+h1 {
+    font-family: arial, verdana, sans-serif;
+    font-size: 100px;
+    font-weight: normal;
+    font-variant: small-caps;
+    /* Font-style italic yaitu merubah jenis font regular menjadi italic (jika ada jenis font italic pada paket font tersebut). Jika tidak maka system memaksa untuk memiringkan font tersebut (obelique) */
+    font-style: italic;
+}
+
+p {
+    font-family: georgia, serif;
+    line-height: 50px;
+}

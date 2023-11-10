@@ -1,0 +1,170 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    line-height: 1.65;
+    padding-bottom: 1000px;
+}
+
+/* Latihan 1 */
+.container-satu {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;;
+    box-sizing: border-box;
+
+}
+
+.kolom-utama {
+    flex: 3;
+    order: 2;
+}
+
+.sidebar-satu {
+    flex: 1;
+    order: 1;
+}
+
+.sidebar-dua {
+    flex: 1;
+    order: 3    ;
+}
+
+/* Responsive */
+@media( min-width: 600px ) {
+    .container-satu {
+        display: flex;
+    }
+}
+/* Akhir Latihan 1 */
+
+/* Latihan 2 */
+.container-dua {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.layanan {
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.layanan.satu {
+    background-color: rgb(0, 153, 255);
+}
+.layanan.dua {
+    background-color: rgb(0, 255, 106);
+}
+.layanan.tiga {
+    background-color: rgb(255, 34, 34);
+}
+
+/* Responsive */
+@media( min-width: 600px ) {
+    .container-dua {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .layanan {
+        width: 30%;
+    }
+}
+/* Akhir Latihan 2 */
+
+/* Latihan 3 */
+.container-tiga {
+    /* step. 1 */
+    /* cara bacanya yaitu: ketika device kurang dari sama dengan 800px maka aplikasikan style berikut */
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    /* step. 3 */
+    /* digunakan agar gambar tidak melebihi besar container, sehingga gambar yang berlebih berada di baris selanjutnya */
+    flex-wrap: wrap;
+    /* step. 5 */
+    justify-content: space-between;
+}
+
+.thumbs {
+    /* step. 4 */
+    margin: 0 5px;
+    width: 47%;
+}
+
+.thumbs img {
+    /* step. 2 */   
+    width: 100%;
+}
+
+/* Responsive */
+/* cara bacanya yaitu: ketika device lebih dari sama dengan 600px maka aplikasikan style berikut */
+@media ( min-width: 600px ) {
+    .thumbs {
+        /* ukuran tergantung berapa gambar yang ingin kita tampilkan dalam satu baris. dalam hal ini 4 gambar per baris, dan tambahan margin kanan-kiri */
+        width: 23%;
+    }
+}
+/* Akhir Latihan 3 */
+
+/* Latihan 4 */
+.container-empat {
+    width: 800px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.card {
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    background-color: #eee;
+    overflow: hidden;
+    margin: 10px;
+    flex: 1;
+}
+
+.card .header {
+    /* karena container (parent) tidak mendefinisikan nilai "height" nya, maka sebagai "child" bisa bebas untuk mendefinisikan nilai "height" nya */
+    height: 150px;
+    background-color: #666;
+}
+
+.card .content {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card.besar {
+    transform: scale(1.13);
+}
+/* Akhir Latihan 4 */
+
+/* Latihan 5 */
+.container-lima {
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    border: 5px solid black;
+    display: flex;
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    color: white;
+    /* cara mudah membuat element "child" berada di tengah-tengah element "parent" nya yaitu dengan mengkombinasikan property "display" dengan value "flex" pada element "parent" nya dan property "margin" dengan value "auto" pada element "child" nya */
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.kotak span {
+    margin: auto;
+}

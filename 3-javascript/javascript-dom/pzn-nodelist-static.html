@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nodelist Static</title>
+  </head>
+  <body>
+    <ul id="menu1">
+      <li id="first">First</li>
+      <li id="second">Second</li>
+      <li id="third">Third</li>
+    </ul>
+
+    <ul id="menu2">
+      <li>Irfan</li>
+      <li>Yahya</li>
+      <li>Abdilah</li>
+    </ul>
+
+    <script>
+      let list = document.querySelectorAll("li");
+
+      // penambahan element baru pada tag ul
+      const menu1 = document.getElementById("menu1");
+      menu1.appendChild(document.createElement("li"));
+      menu1.appendChild(document.createElement("li"));
+
+      console.info(list); // menghasilkan 6 node, penambahan element baru tidak akan berpengaruh
+
+      // untuk mendapatkan data terbaru, kita harus melakukan query ulang
+      list = document.querySelectorAll("li");
+
+      console.info(list); // menghasilkan 8 node, penambahan element baru berpengaruh ketika kita melakukan query ulang
+    </script>
+  </body>
+</html>

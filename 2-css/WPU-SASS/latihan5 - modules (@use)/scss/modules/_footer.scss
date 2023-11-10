@@ -1,0 +1,16 @@
+// kita langsung memanggil file mixin di halaman yang membutuhkan. karena saat ini, file mixin.scss tidak global lagi
+@use "mixin" as m;
+
+.footer ul {
+  // kemudian kita juga harus menggunakan namespace di depan property nya
+  @include m.inlineList();
+  li {
+    background-color: salmon;
+    padding: 0.7em;
+    cursor: pointer;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

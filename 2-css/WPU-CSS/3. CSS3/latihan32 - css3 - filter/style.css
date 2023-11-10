@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+}
+
+/* Filter
+    blur (px) membuat gaussian blur seperti di photoshop, nilai defaultnya 0
+
+    brightness (angka / %) mengatur kecerahan, nilai defaultnya 1 / 100%
+
+    contrast (angka / %) mengatur pencahayaan, nilai defaultnya 1 / 100%
+
+    saturate (angka / %) mengatur kepekatan warna, nilai defaultnya 1 / 100%
+
+    grayscale (angka / %) kebalikan dari saturate, nilai defaultnya 0, nilai max nya 1
+
+    sepia (angka / %) seperti grayscale tapi warna yang keluar kekuning-kuningan, nilai defaultnya 0, nilai max nya 1
+
+    hue-rotate (n deg) mengatur pewarnaan, nilai defaultnya 0, dapat diatur antara 0 - 360 deg / -180 - 180 deg
+
+    invert (angka / %) memberi efek negatif, nilai defaultnya 0, nilai max nya 1
+
+    opacity (angka / %) seperti property opacity pada css, tapi lebih baik dan canggih
+
+    drop-shadow (x-offset, y-offset, blur, color) seperti property opacity pada css, tapi lebih baik
+*/
+
+img {
+    width: 700px;
+    filter: blur(10px) grayscale(.8);
+    transition: .25s;
+}
+
+img:hover {
+    filter: blur(0) grayscale(0);
+}

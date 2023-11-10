@@ -1,0 +1,23 @@
+/* Penggunaan padding sama seperti margin, perbedaannya yaitu ada pada paddiing tidak bisa diberi "nilai negatif" dan tidak bisa diberi "nilai auto" */
+/* Padding dan border mempengaruhi ukuran elemen, dapat diakali dengan property box-sizing */
+div {
+    width: 600px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.satu {
+    /* jika tidak menggunakan box-sizing width yang seharusnya adalah dibawah */
+    /* width: 570px; */
+    background-color: blueviolet;
+    padding: 10px;
+    border: 15px solid red;
+}
+
+.dua {
+    /* jika tidak menggunakan box-sizing width yang seharusnya adalah dibawah */
+    /* width: 520px; */
+    background-color: greenyellow;
+    padding: 30px;
+    border: 10px dashed orange;
+}

@@ -1,0 +1,59 @@
+// mixin
+// simple mixin
+@mixin inlineList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+
+.header ul {
+  @include inlineList();
+  li {
+    background-color: black;
+    padding: 0.7em;
+    a {
+      color: white;
+    }
+  }
+}
+
+.footer ul {
+  @include inlineList();
+  li {
+    background-color: salmon;
+    padding: 0.7em;
+    cursor: pointer;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+// arguments pada mixin
+// didalam mixin kita bisa memberi parameter, beserta nilai defaultnya. seperti "@mixin namaFunction ($parameter: nilaiDefault)"
+@mixin flexBox($direction: row, $space: center) {
+  display: flex;
+  // penggunaan mixin dengan nilai default
+  justify-content: $space;
+  align-items: center;
+  // penggunaan mixin dengan nilai default
+  flex-direction: $direction;
+}
+.container {
+  // penggunaan mixin dengan nilai baru akan menimpa nilai defaultnya
+  @include flexBox(row-reverse, space-evenly);
+  width: 600px;
+  height: 400px;
+  background-color: #eaeaea;
+  .box {
+    width: 60px;
+    height: 60px;
+    background-color: #bada55;
+    text-align: center;
+    line-height: 60px;
+  }
+}

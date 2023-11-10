@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  background-color: rgb(154, 82, 221);
+  justify-content: space-around;
+  /* boleh milih, bisa menggunakan kombinasi */
+  /* padding: 15px 0; */
+  /*  dan align-items: center; di nav ul */
+  height: 80px;
+  align-items: center;
+  color: rgb(222, 191, 252);
+}
+
+nav .logo {
+  font-family: "Allura", cursive;
+  font-size: 48px;
+}
+
+nav ul {
+  display: flex;
+  width: 40%;
+  list-style: none;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(222, 191, 252);
+}
+
+nav ul li:hover a {
+  color: rgb(170, 146, 192);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -4px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  /* ketika berada dalam mode selain mobile, maka hamburger menu tidak akan terlihat */
+  display: none;
+  width: 28px;
+  height: 3px;
+  background-color: rgb(222, 191, 252);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:last-child {
+  transform-origin: 0 100%;
+}
+
+/* cara bacanya yaitu, ketika "input" di check, maka cari saudara dari "input" yang merupakan element "span" anak nomor dua */
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: #fff;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.menu-toggle input:checked ~ span:last-child {
+  background-color: #fff;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+
+/* Responsive Breakpoint */
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+  .menu-toggle span {
+    display: flex;
+  }
+
+  nav ul {
+    /* pemberian property "absolute" bertujuan agar element nya tetap berada di tempat yang sama seperti di tampilan desktop */
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+    /* 100vh adalah 100% "viewport height", atau tinggi dari layar yang kita lihat */
+    height: 100vh;
+    background-color: rgb(154, 82, 221);
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: -1;
+    /* cara mengakali agar navbar nya tampak menghilang, sebenarnya ada di samping web. coba beri comment bagian "body", dengan property "overflow" nya */
+    transform: translateX(100%);
+    transition: all 1s;
+    /* "opacity" disini berguna untuk transition ketika navbar nya sudah diberi class "slide" di "javascript" */
+    opacity: 0;
+  }
+
+  nav ul.slide {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Ukuran Mobile */
+@media screen and (max-width: 576px) {
+}

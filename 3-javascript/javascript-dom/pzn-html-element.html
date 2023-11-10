@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Element</title>
+  </head>
+  <body>
+    <a id="link"></a>
+
+    <script>
+      const link = document.getElementById("link");
+      // link.href = link.setAttribute("href")
+      // HTML element memiliki kemampuan bawaan untuk bisa setAttribute tanpa memanggil setAttribute itu sendiri
+      link.href = "https://www.youtube.com";
+      link.target = "_blank";
+      link.textContent = "Website Youtube";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendahuluan</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            font-family: arial;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .container {
+            width: 600px;
+            margin: 50px auto;
+            border: 5px solid #333;
+            box-sizing: border-box;
+            padding: 5px;
+            /* dengan display "grid", kita memperlakukan element seperti sebuah "table" */
+            display: grid;
+            /* property "grid-template-areas" berfungsi untuk memetakan "columns" dan "rows" dari sebuah display "grid" sesuai keinginnan kita. seperti dalam "table", nilai pertama merepresentasikan "columns", nilai kedua merepresentasikan "rows" */
+            grid-template-areas: "header header"
+                "aside main"
+                "nav main"
+                "footer footer";
+            /* property "grid-template-columns" berfungsi untuk mengatur ukuran dari "columns" sebuah "table". fr singkatan dari fraction (pecahan), berlaku seperti "flex-grow" yang besarnya relatif terhadap "container" nya */
+            grid-template-columns: 1fr 1.5fr;
+            /* property "grid-template-rows" berfungsi untuk mengatur ukuran dari "rows" sebuah "table". fr singkatan dari fraction (pecahan), berlaku seperti "flex-grow" yang besarnya relatif terhadap "container" nya */
+            grid-template-rows: 1fr 1fr 1.3fr;
+        }
+
+        header {
+            background-color: #B063D8;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: header;
+        }
+
+        aside {
+            background-color: #2F93FF;
+            padding: 60px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: aside;
+        }
+
+        nav {
+            background-color: #E45765;
+            padding: 100px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: nav;
+        }
+
+        main {
+            background-color: #E0AA77;
+            box-sizing: border-box;
+            /* kita bisa menggunakan property display dengan value "grid" untuk element "parent" nya, dan property display dengan value "flex" untuk element child nya secara bersama-sama */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-area: main;
+        }
+
+        footer {
+            background-color: #666;
+            padding: 20px 0;
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <header>Header</header>
+        <aside>Aside</aside>
+        <nav>Nav</nav>
+        <main>Main</main>
+        <footer>Footer</footer> 
+    </div>
+
+</body>
+</html>

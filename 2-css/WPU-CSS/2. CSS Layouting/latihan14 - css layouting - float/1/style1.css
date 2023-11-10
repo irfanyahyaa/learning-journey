@@ -1,0 +1,35 @@
+/* pengenalan float dan text wrapping */
+.container {
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 5px;
+}
+
+.satu, .dua, .tiga {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.satu {
+    background-color: salmon;
+}
+
+.dua {
+    background-color: limegreen;
+    /* penggunaan float memaksa penempatan pada sebuat element, disisi "left" atau "right" */
+    float: right;
+}
+
+.tiga {
+    background-color: lightskyblue;
+
+}
+
+img {
+    width: 150px;
+    margin: 5px;
+    /* dengan menambahkan property "float", kita dapat melakukan text wrapping pada elemen "p" terhadap element sebelumnya "img"  */
+    float: left;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator In</title>
+  </head>
+  <body>
+    <script>
+      // Operator in hanya mengecek index/attribue, tidak dengan nilai nya
+      const person = {
+        firstName: "Irfan",
+        lastName: "Abdillah",
+      };
+
+      if ("firstName" in person) {
+        alert(`Hello ${person.firstName}`);
+      } else {
+        alert("Hello");
+      }
+
+      const student = {
+        firstName: "irfan",
+        middleName: undefined,
+        lastName: "Abdillah",
+      };
+
+      if ("middleName" in student) {
+        alert(`Hello ${student.middleName}`);
+      } else {
+        alert("Hello Student");
+      }
+
+      const name = [null, "Yahya", null];
+      const result = 0 in names; // Mengecek index 0 di dalam array names
+      document.writeln(`<p>${result}</p>`);
+    </script>
+  </body>
+</html>

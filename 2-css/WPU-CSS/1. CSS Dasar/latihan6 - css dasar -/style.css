@@ -1,0 +1,57 @@
+/* pseudo-class yang berhubungan dengan link yang pertama, style active secara default */
+.hello:link {
+    color: orange;
+}
+
+/* pseudo-class yang berhubungan dengan link yang kedua, style active ketika cursor berada diatas link */
+.hello:hover {
+    font-family: arial;
+    font-size: 20px;
+    color: green;
+}
+
+/* pseudo-class yang berubungan dengan link yang ketiga, style active ketika cursor meng-klik link */
+.hello:active {
+    font-style: italic;
+}
+
+/* pseudo-class yang berhubungan dengan link yang keempat, style active secara default ketika link sudah pernah dikunjungi sebelumnya */
+.hello:visited {
+    color: red;
+}
+
+/* Cara bacanya: CSS tolong carikan saya "a" yang ada di dalam "li" yang merupakan "first-child" */
+li:first-child a {
+    color: green;
+}
+
+li:nth-child(3) a {
+    color: magenta;
+}
+
+li:nth-child(4n) a {
+    color: goldenrod;
+}
+
+/* "odd" untuk ganjil dan "even" untuk genap */
+li:nth-child(odd) a {
+    color: royalblue;
+}
+
+li:nth-child(odd) a:hover {
+    color: tomato;
+}
+
+li:last-child a {
+    color: lawngreen;
+}
+
+
+/* "first-of-type" merupakan pseudo-class yang berhubungan dengan element */
+p:first-of-type {
+    color: indigo;
+}
+
+p:last-of-type {
+    color: palevioletred;
+}

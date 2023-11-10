@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nodelist Live</title>
+  </head>
+  <body>
+    <ul id="menu1">
+      <li id="first">First</li>
+      <li id="second">Second</li>
+      <li id="third">Third</li>
+    </ul>
+
+    <ul id="menu2">
+      <li>Irfan</li>
+      <li>Yahya</li>
+      <li>Abdilah</li>
+    </ul>
+
+    <script>
+      // nodelist live memungkinkan untuk terus mengupdate nodelist ketika terjadi perubahan
+      const menu1 = document.getElementById("menu1");
+      const list = menu1.childNodes;
+
+      menu1.appendChild(document.createElement("li"));
+      menu1.appendChild(document.createElement("li"));
+
+      console.info(list); // list tetap bertambah meskipun variable list dieksekusi terlebih dahulu sebelum penambahan element pada tag ul
+    </script>
+  </body>
+</html>

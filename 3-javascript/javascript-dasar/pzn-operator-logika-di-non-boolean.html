@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operator Logika di Non Boolean</title>
+  </head>
+  <body>
+    <script>
+      // Operator || mengambil nilai pertama yang truthy
+      // Jika tidak ada yang bernilai truthy, maka nilai terakhir yang akan diambil
+      console.info("Operator ||");
+
+      console.info("Hello" || ""); // Hello
+      console.info("" || []); // []
+      console.info("0" || "Nol"); // 0
+      console.info(0 || "Nol"); // Nol
+      console.info(null || "Null"); // Null
+      console.info(undefined || "Undefined"); // Undefined
+      // Ketika kedua data bernilai false, maka diambil false yang terakhir
+      console.info(0 || false); // false
+      console.info(false || null); // null
+
+      // Contoh penggunaan
+      console.info("Contoh Penggunaan Operator ||");
+      const person = {
+        firstName: "",
+        lastName: "Abdillah",
+      };
+
+      const name = person.firstName || person.lastName;
+      console.info(name);
+
+      // Operator && mengambil nilai pertama yang falsy
+      // Jika tidak ada yang bernilai falsy, maka nilai terakhir yang akan diambil
+      console.info("Operator &&");
+
+      console.info("Hello" && ""); // ""
+      console.info("" && []); // ""
+      console.info("0" && "Nol"); // Nol
+      console.info(0 && "Nol"); // 0
+      console.info(null && "Null"); // null
+      console.info(undefined && "Undefined"); // undefined
+      // Ketika kedua data bernilai false, maka diambil false yang terakhir
+      console.info(0 && false); // 0
+      console.info(false && null); // false
+    </script>
+  </body>
+</html>

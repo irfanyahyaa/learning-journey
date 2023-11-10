@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #141d26;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.twitter {
+  width: 539px;
+  height: 158px;
+  padding: 35px 31px;
+  background-color: #243447;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: 0px 15px 60px 0px rgba(52, 81, 116, 0.15);
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.profile {
+  display: flex;
+  column-gap: 20px;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.profile-acc h3 {
+  font-size: 18px;
+}
+
+.profile-acc p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.tweet > p span {
+  color: #1da1f2;
+}
+
+.note {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.likes {
+  display: flex;
+  column-gap: 10px;
+}
+
+.likes > img {
+  width: 24px;
+  height: 24px;
+}
+
+.likes > p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.date {
+  color: rgba(255, 255, 255, 0.6);
+}

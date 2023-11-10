@@ -1,0 +1,11 @@
+/* penggunaan "font-face" fungsinya seperti "font-family". akan tetapi, lebih fleksibel karena font nya kita upload kepada hostingan. sehingga user tetap dapat tampilan yang sama (font) meskipun tidak memiliki font tersebut dalam device mereka */
+@font-face {
+    font-family: "Alex Brush";
+    src: url('AlexBrush-Regular.ttf') format('truetype');
+}
+
+h1 {
+    font-size: 100px;
+    text-align: center;
+    font-family: "Alex Brush", arial;
+}

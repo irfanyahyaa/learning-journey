@@ -1,0 +1,18 @@
+div {
+    display: inline-block;
+}
+
+.satu {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    /* Nilai default dari attribute overflow adalah visible, maka "content" yang melebihi pembungkusnya akan tetap diperlihatkan  */
+}
+
+.dua {
+    width: 200px;
+    height: 200px;
+    background-color: antiquewhite;
+    /* Nilai "auto" dari overflow digunakan jika "content" melebihi besar pembungkusnya, dalam hal ini "div" nya */
+    overflow: auto;
+}

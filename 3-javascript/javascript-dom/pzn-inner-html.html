@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inner HTML</title>
+  </head>
+  <body>
+    <p id="content1"></p>
+    <p id="content2"></p>
+
+    <script>
+      const content1 = document.getElementById("content1");
+      const content2 = document.getElementById("content2");
+      content1.innerText =
+        "<h1>Belajar Javascript DOM</h1><p>Selamat Belajar Javascript DOM</p>";
+      content2.innerHTML =
+        "<h1>Belajar Javascript DOM</h1><p>Selamat Belajar Javascript DOM</p>";
+      // disini innerHTML memiliki keuntungan karena dapat menerjemahkan tag dan text html
+      // seakan-akan file html itu sendiri
+    </script>
+  </body>
+</html>

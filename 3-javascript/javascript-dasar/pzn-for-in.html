@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For In</title>
+  </head>
+  <body>
+    <script>
+      // Meng Iterasi Index dari suatu Array atau Object
+      const person = {
+        firstName: "Irfan",
+        middleName: "Yahya",
+        lastName: "Abdillah",
+      };
+
+      for (const property in person) {
+        document.writeln(`<p>${property} : ${person[property]}</p>`);
+      }
+
+      const name = ["Irfan", "Yahya", "Abdillah"];
+      for (const index in name) {
+        document.writeln(`<p>${index} : ${name[index]}</p>`);
+      }
+    </script>
+  </body>
+</html>

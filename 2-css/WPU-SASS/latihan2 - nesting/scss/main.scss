@@ -1,0 +1,57 @@
+.main {
+  background-color: lightblue;
+
+  .main-heading {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.4em;
+  }
+}
+
+// cara membaca code dibawah yaitu kita aplikasikan style pada .main dan .footer, yang didalamnya terdapat h1 dan p
+.main,
+.footer {
+  h1,
+  p {
+    letter-spacing: 1px;
+  }
+}
+
+// &
+// Parent Selector
+.main {
+  // fungsi dari & adalah agar kita bisa mengakses parent melalui child nya
+  .container & {
+    background-color: lightblue;
+  }
+  .main-heading {
+    font-size: 2em;
+  }
+
+  // sedangkan pada code dibawah ini, fungsi & adalah untuk membuat pseudo-class dari selctor .main
+  &:hover {
+    background-color: salmon;
+  }
+}
+
+.main {
+  // code dibawah berfungsi untuk mengakses element parent nya guna specificity. jika hanya menggunakan 1 &, maka kita hanya dapat mengakses main-heading
+  & &-heading {
+    font-size: 2em;
+  }
+  & &-paragraph {
+    font-size: 1.4em;
+  }
+}
+
+.footer {
+  // code dibawah berfungsi untuk mengganti 2 &, seperti code diatas
+  #{&}-heading {
+    font-size: 2em;
+  }
+  #{&}-paragraph {
+    font-size: 1.4em;
+  }
+}

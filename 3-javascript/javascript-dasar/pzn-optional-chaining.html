@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optional Chaining</title>
+  </head>
+  <body>
+    <script>
+      // Optional chaining berfungsi untuk menghindari error dari gagal mengaksesnya nilai null atau undefined
+      const person = {
+        // address: {
+        //   country: "Indonesia"
+        // }
+      };
+
+      // Menggunakan optional chaining
+      // let country = person?.address?.country;
+
+      // Tanpa menggunakan optional chaining
+      // if (person.address !== undefined && person.address !== null) {
+      //   country = person.address.country;
+      // }
+
+      document.writeln(`<p>${country}</p>`);
+
+      document.writeln(`Sukses`);
+    </script>
+  </body>
+</html>
