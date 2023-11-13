@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Execution Context, Hoisting, and Scope</title>
+  </head>
+  <body>
+    <script>
+      // execution context
+
+      // 1. creation phase, hoisting
+      // var = undefined
+      // function = fn()
+      // window = global{}
+      // this = window
+
+      // console.log(nama);
+      // var nama = "Irfan";
+
+      // -----------------------------------------------------------------------------------------------------
+      // 2. execution phase
+      // console.log(sayHello());
+
+      // var nama = "Irfan";
+      // var umur = 24;
+
+      // function sayHello() {
+      //   return `Halo, nama saya ${nama}, saya ${umur} tahun`;
+      // }
+      // function membuat local execution context
+      // dapat mengakses arguments / parameters
+
+      // -----------------------------------------------------------------------------------------------------
+      // 3. contoh
+      // var nama = "Irfan Yahya";
+      // var username = "irfan_yahya";
+
+      // function cetakURL(username) {
+      //   var instagramURL = `https://instagram.com/${username}/`;
+      //   return instagramURL;
+      // }
+
+      // console.log(cetakURL(username));
+
+      // -----------------------------------------------------------------------------------------------------
+      // 4. contoh
+      // function a() {
+      //   console.log("ini a");
+      //   function b() {
+      //     console.log("ini b");
+      //     function c() {
+      //       console.log("ini c");
+      //     }
+      //     c();
+      //   }
+      //   b();
+      // }
+      // a();
+
+      // -----------------------------------------------------------------------------------------------------
+      // 5. contoh
+      // var nama = "Irfan Yahya";
+      // var username = "irfan_yahya";
+
+      // function cetakURL() {
+      //   console.log(arguments);
+      //   var instagramURL = `https://instagram.com/${username}/`;
+      //   return instagramURL;
+      // }
+
+      // console.log(cetakURL("zafira_husna"));
+
+      // -----------------------------------------------------------------------------------------------------
+      // 6. latihan
+      function satu() {
+        var nama = "Irfan";
+        console.log(nama);
+      }
+
+      function dua() {
+        console.log(nama);
+      }
+
+      console.log(nama); // undefined
+      var nama = "Yahya";
+      satu(); // Irfan
+      dua("Abdillah"); // Yahya
+      console.log(nama); // Yahya
+    </script>
+  </body>
+</html>
