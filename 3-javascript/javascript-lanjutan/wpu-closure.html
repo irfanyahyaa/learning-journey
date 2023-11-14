@@ -7,7 +7,8 @@
   </head>
   <body>
     <script>
-      // lexical scope
+      // 1. lexical scope
+      
       // function init() {
       //   let nama = "Irfan"; // local variable
       //   function tampilNama() { // inner function (*closure)
@@ -28,7 +29,9 @@
       // panggilNama("Irfan");
       // panggilNama("Yahya");
 
-      // factory function
+      // -----------------------------------------------------------------------------------------------------
+      // 2. factory function
+
       // function ucapkanSalam(waktu) {
       //   return function (nama) {
       //     console.log(`Halo ${nama}, Selamat ${waktu}, semoga harimu menyenangkan!`)
@@ -42,10 +45,14 @@
       // // ucapkanSalam("Siang")("Yahya")
       // selamatPagi("Irfan")
       // console.dir(selamatMalam)
-      // private methods
+
+      // -----------------------------------------------------------------------------------------------------
+      // 3. private methods
+
       let add = (function () {
         let counter = 0; // private variable
-        return function () { // private method
+        return function () {
+          // private method
           return ++counter;
         };
       })(); // immediately invoked function expression
