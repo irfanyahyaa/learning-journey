@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <script>
+      // lexical scope
+      // function init() {
+      //   let nama = "Irfan"; // local variable
+      //   function tampilNama() { // inner function (*closure)
+      //     console.log(nama); // lexical scope
+      //   }
+      //   console.dir(tampilNama); // check closure
+      // }
+      // init();
+
+      // function init() {
+      //   // let nama = "Irfan";
+      //   return function (nama) {
+      //     console.log(nama);
+      //   };
+      // }
+      // let panggilNama = init();
+
+      // panggilNama("Irfan");
+      // panggilNama("Yahya");
+
+      // factory function
+      // function ucapkanSalam(waktu) {
+      //   return function (nama) {
+      //     console.log(`Halo ${nama}, Selamat ${waktu}, semoga harimu menyenangkan!`)
+      //   }
+      // }
+
+      // let selamatPagi = ucapkanSalam("Pagi")
+      // let selamatSiang = ucapkanSalam("Siang")
+      // let selamatMalam = ucapkanSalam("Malam")
+
+      // // ucapkanSalam("Siang")("Yahya")
+      // selamatPagi("Irfan")
+      // console.dir(selamatMalam)
+      // private methods
+      let add = (function () {
+        let counter = 0; // private variable
+        return function () { // private method
+          return ++counter;
+        };
+      })(); // immediately invoked function expression
+
+      counter = 100;
+
+      console.log(add());
+      console.log(add());
+      console.log(add());
+      console.log(add());
+      console.log(add());
+    </script>
+  </body>
+</html>
