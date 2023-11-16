@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Var, Let, Const</title>
+  </head>
+  <body>
+    <script>
+      // 1. var (function scope)
+      // i = 10; // var
+      // console.log(i); // 10
+
+      // console.log(i);
+      // var i = 10; // undefined
+
+      // var i;
+      // console.log(i); // undefined
+      // i = 10;
+
+      // -----------------------------------------------------------------------------------------------------
+      // 2. loop
+      // function scope
+      // for (var i = 0; i < 10; i++) {
+      //   console.log(i);
+      // }
+      // console.log(i); // 10
+
+      // block scope
+      // function test() {
+      //   for (var i = 0; i < 10; i++) {
+      //     console.log(i);
+      //   }
+      // }
+      // console.log(i); // error
+
+      // immediately invoke function expression
+      // (function test() {
+      //   for (var i = 0; i < 10; i++) {
+      //     console.log(i);
+      //   }
+      // })();
+      // console.log(i); // error
+
+      // -----------------------------------------------------------------------------------------------------
+      // 3. let (block scope)
+      // mutable
+      // note meme: gunakan let hanya untuk looping
+
+      // console.log(i); // error
+      // let i = 10;
+
+      // for (let i = 0; i < 10; i++) {
+      //   console.log(i);
+      // }
+      // console.log(i); // error
+
+      // -----------------------------------------------------------------------------------------------------
+      // 4. const (block scope)
+      // immutable
+      // meminimalisir perubahan state
+
+      // const i = 10;
+      // i = 15; // error
+
+      const mhs = {
+        nama: "Irfan",
+        umur: 24,
+      };
+      
+      // mhs.umur = 25 // success
+      mhs = {
+        jurusan: "Agribisnis",
+      }; // error
+      
+      console.log(mhs);
+    </script>
+  </body>
+</html>
