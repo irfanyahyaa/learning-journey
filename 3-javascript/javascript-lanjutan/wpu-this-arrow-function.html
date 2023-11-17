@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this Arror function</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        margin: 50px auto;
+        transition: 0.3s width, 0.3s height 0.3s, 0.3s margin-top 0.3s,
+          1s background-color;
+      }
+
+      .size {
+        width: 150px;
+        height: 150px;
+        margin-top: 25px;
+      }
+
+      .caption {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+
+    <script>
+      // this pada constructor function
+      // const Mahasiswa = function () {
+      //   this.nama = "Irfan";
+      //   this.umur = 24;
+      //   console.log(this);
+      //   this.sayHello = function () {
+      //     console.log(`Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun.`);
+      //   };
+      // };
+      // const Irfan = new Mahasiswa();
+
+      // const Mahasiswa = function () {
+      //   this.nama = "Irfan";
+      //   this.umur = 24;
+      //   console.log(this);
+      //   this.sayHello = () => {
+      //     console.log(
+      //       `Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun.`
+      //     );
+      //   };
+      // };
+      // const Irfan = new Mahasiswa();
+
+      // -----------------------------------------------------------------------------------------------------
+      // this pada object literals
+      // const mhs1 = {
+      //   nama: "Irfan",
+      //   umur: 24,
+      //   sayHello: () => {
+      //     console.log(
+      //       `Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun.`
+      //     );
+      //     console.log(this);
+      //   },
+      // };
+
+      // -----------------------------------------------------------------------------------------------------
+      // this pada function declaration
+      // const Mahasiswa = function () {
+      //   this.nama = "Irfan";
+      //   this.umur = 24;
+      //   console.log(this);
+      //   this.sayHello = function () {
+      //     console.log(
+      //       `Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun.`
+      //     );
+      //   };
+
+      //   setInterval(() => {
+      //     console.log(this.umur++);
+      //   }, 500);
+      // };
+      // const Irfan = new Mahasiswa();
+
+      // -----------------------------------------------------------------------------------------------------
+      // contoh
+      class Person {
+        constructor(name) {
+          this.name = name;
+        }
+
+        printNameArrow() {
+          setTimeout(() => {
+            console.log(`Arrow: ${this.name}`);
+            // this mengacu pada dimana scope arrow function
+          }, 100);
+        }
+
+        printNameFunction() {
+          setTimeout(function () {
+            console.log(`Function: ${this.name}`);
+            // this mengacu pada dimana function ini dipanggil
+          }, 100);
+        }
+      }
+
+      let person = new Person("Irfan");
+      person.printNameArrow();
+      person.printNameFunction(); // this mengacu pada global
+      console.log(this.name); // window
+
+      // -----------------------------------------------------------------------------------------------------
+      // contoh
+      const box = document.querySelector(".box");
+
+      box.addEventListener("click", function () {
+        let satu = "size";
+        let dua = "caption";
+
+        if (this.classList.contains(satu)) {
+          [satu, dua] = [dua, satu]; // menukar isi variable
+        }
+
+        // console.log(this); // box
+        this.classList.toggle(satu);
+
+        // setTimeout(function() {
+        //   this.classList.toggle("caption");
+        //   console.log(this) // window
+        // }, 600);
+
+        setTimeout(() => {
+          this.classList.toggle(dua);
+          console.log(this); // box
+        }, 600);
+      });
+    </script>
+  </body>
+</html>
