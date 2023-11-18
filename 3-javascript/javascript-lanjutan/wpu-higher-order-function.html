@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higher Order Function</title>
+  </head>
+  <body>
+    <script>
+      // higher order function
+      // contoh function sebagai params
+      // function kerjakanTugas(mataKuliah, selesai) { // selesai sebagai params
+      //   console.log(`Mulai mengerjakan tugas ${mataKuliah}`);
+      //   selesai();
+      // }
+
+      // // callback
+      // function selesai() {
+      //   setTimeout(() => {
+      //     alert(`Selesai mengerjakan tugas!`);
+      //   }, 1500);
+      // }
+
+      // kerjakanTugas("Pemrograman Web", selesai);
+
+      // -----------------------------------------------------------------------------------------------------
+      // higher order function
+      // contoh function sebagai return
+      // function ucapkanSalam(waktu) {
+      //   return function (nama) {
+      //     // anonymous function sebagai return
+      //     console.log(
+      //       `Halo ${nama}, Selamat ${waktu}, semoga harimu menyenangkan!`
+      //     );
+      //   };
+      // }
+
+      // let selamatMalam = ucapkanSalam("Malam");
+
+      // console.dir(selamatMalam("Irfan"));
+
+      // -----------------------------------------------------------------------------------------------------
+      // contoh
+      // for loop
+      // for (let i = 0; i < 10; i++) {
+      //   console.log(i);
+      // }
+
+      // -----------------------------------------------------------------------------------------------------
+      // for loop dinamis
+      // function repeatLog(n) {
+      //   for (let i = 0; i < n; i++) {
+      //     console.log(i);
+      //   }
+      // }
+
+      // repeatLog(10);
+
+      // -----------------------------------------------------------------------------------------------------
+      // fot loop dinamis 2
+      function repeat(n, action) {
+        for (let i = 0; i < n; i++) {
+          action(i); // action sebagai params
+        }
+      }
+
+      repeat(10, console.log);
+      repeat(3, alert);
+    </script>
+  </body>
+</html>
