@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Filter, Map, Reduce</title>
+  </head>
+  <body>
+    <h3>My Videos</h3>
+    <ul>
+      <li data-duration="15:27">Teknik Pomodoro</li>
+      <li data-duration="11:18">JAVASCRIPT LANJUTAN | Higher Order Function</li>
+      <li data-duration="21:40">
+        JAVASCRIPT LANJUTAN | This pada Arrow Function
+      </li>
+      <li data-duration="19:38">Website Penipu</li>
+      <li data-duration="12:10">JAVASCRIPT LANJUTAN | Arrow Function</li>
+      <li data-duration="20:43">JAVASCRIPT LANJUTAN | Closure</li>
+      <li data-duration="14:30">#TANYAPADIKA EP005</li>
+      <li data-duration="26:38">JAVASCRIPT LANJUTAN | Execution Context/li></li>
+      <li data-duration="17:33">JAVASCRIPT LANJUTAN | Prototype/li></li>
+      <li data-duration="10:39">JAVASCRIPT LANJUTAN | Object.create()/li></li>
+      <li data-duration="17:31">
+        JAVASCRIPT LANJUTAN | Object (Revisited)/li>
+      </li>
+      <li data-duration="14:25">5 Tips Bertanya Ketika Errors</li>
+    </ul>
+
+    <h3>My Playlist</h3>
+    <ol>
+      <li>
+        <h4>Javascript Lanjutan</h4>
+        <p>Jumlah Video : <span class="jumlah-video"></span></p>
+        <p>Total Durasi : <span class="total-durasi"></span></p>
+      </li>
+    </ol>
+
+    <script>
+      // versi wpu
+      // ambil semua elemen video
+      // const videos = Array.from(document.querySelectorAll("[data-duration]"));
+
+      // // pilih hanya yang "JAVASCRIPT LANJUTAN"
+      // let jsLanjut = videos
+      //   .filter((video) => video.textContent.includes("JAVASCRIPT LANJUTAN"))
+
+      //   // ambil durasi masing-masing video
+      //   .map((item) => item.dataset.duration)
+
+      //   // ubah durasi menjadi float, ubah menit menjadi detik
+      //   .map((waktu) => {
+      //     const parts = waktu.split(":").map((part) => parseFloat(part));
+      //     return parts[0] * 60 + parts[1];
+      //   })
+
+      //   // jumlahkan semua detik
+      //   .reduce((total, detik) => total + detik);
+
+      // // ubah formatnya menjadi jam menit detik
+      // const jam = Math.floor(jsLanjut / 3600);
+      // jsLanjut = jsLanjut - jam * 3600;
+      // const menit = Math.floor(jsLanjut / 60);
+      // const detik = jsLanjut - menit * 60;
+
+      // // simpan di DOM
+      // const pDurasi = document.querySelector(".total-durasi");
+      // pDurasi.textContent = `${jam} Jam, ${menit} Menit, ${detik} Detik.`;
+
+      // const jmlVideo = videos.filter((video) =>
+      //   video.textContent.includes("JAVASCRIPT LANJUTAN")
+      // ).length;
+      // const pJmlVideo = document.querySelector(".jumlah-video");
+      // pJmlVideo.textContent = `${jmlVideo} Video.`;
+
+      // -----------------------------------------------------------------------------------------------------
+      // versi revisi
+      // ambil semua elemen video
+      const videos = Array.from(document.querySelectorAll("ul > li"));
+
+      // pilih hanya yang "JAVASCRIPT LANJUTAN"
+      const jsLanjut = videos.filter((a) =>
+        a.innerHTML.includes("JAVASCRIPT LANJUTAN")
+      );
+
+      // ambil durasi masing-masing video
+      const durasi = jsLanjut.map((b) => b.getAttribute("data-duration"));
+
+      // ubah durasi menjadi int, ubah menit menjadi detik
+      const durasiDetik = durasi.map((c) => {
+        const detik = c.split(":").map((d) => parseFloat(d));
+        return detik[0] * 60 + detik[1];
+      });
+
+      // jumlahkan semua detik
+      const totalDetik = durasiDetik.reduce((e, f) => e + f, 0);
+
+      // ubah formatnya menjadi jam menit detik
+      const detik = totalDetik % 60;
+      const menit = Math.floor((totalDetik % 3600) / 60);
+      const jam = Math.floor(totalDetik / 3600);
+
+      // simpan di DOM
+      const totalDurasi = document.querySelector(".total-durasi");
+      totalDurasi.innerHTML = `${jam} Jam, ${menit} Menit, ${detik}, Detik`;
+
+      const jumlahVideo = document.querySelector(".jumlah-video");
+      jumlahVideo.innerHTML = `${jsLanjut.length} Video`;
+
+      console.log(totalDurasi);
+    </script>
+  </body>
+</html>

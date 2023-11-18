@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter, Map, Reduce</title>
+  </head>
+  <body>
+    <script>
+      const angka = [1, -4, 4, 3, 6, 9, -5, 7, 5, -6];
+
+      // filter
+      // angka >= 3
+
+      // for loop
+      // const lebihTiga = [];
+      // for (let i = 0; i < angka.length; i++) {
+      //   if (angka[i] >= 3) {
+      //     lebihTiga.push(angka[i]);
+      //   }
+      // }
+      // console.log(lebihTiga);
+
+      // filter
+      // const lebihTiga = angka.filter(n => n >= 3);
+      // console.log(lebihTiga);
+
+      // -----------------------------------------------------------------------------------------------------
+      // map
+      // angka * 2
+      // const kaliTiga = angka.map(n => n * 2);
+      // console.log(angka)
+      // console.log(kaliTiga);
+
+      // -----------------------------------------------------------------------------------------------------
+      // reduce
+      // jumlah
+      // const jumlah = angka.reduce(
+      //   (accumulator, currentValue) => accumulator + currentValue,
+      //   0
+      // ); // 0 adalah initialValue
+      // console.log(jumlah);
+
+      // -----------------------------------------------------------------------------------------------------
+      // method chaining
+      // (angka > 5) * 3
+      // jumlah
+      const total = angka
+        .filter((a) => a > 5) // 6, 9, 7
+        .map((b) => b * 3) // 18, 27, 21
+        .map((b) => b / 2) // 9, 13.5, 10.5
+        .reduce((accu, curr) => accu + curr, 0); // 66 atau 33
+
+      console.log(total);
+    </script>
+  </body>
+</html>
