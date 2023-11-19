@@ -9,6 +9,7 @@
     <script>
       // 1. var (function scope)
       // dihindari karena memiliki perilaku hoisting dan function scope
+
       // i = 10; // var
       // console.log(i); // 10
 
@@ -21,13 +22,14 @@
 
       // -----------------------------------------------------------------------------------------------------
       // 2. loop
-      // function scope
+
+      // // function scope
       // for (var i = 0; i < 10; i++) {
       //   console.log(i);
       // }
       // console.log(i); // 10
 
-      // block scope
+      // // block scope
       // function test() {
       //   for (var i = 0; i < 10; i++) {
       //     console.log(i);
@@ -35,7 +37,7 @@
       // }
       // console.log(i); // error
 
-      // immediately invoke function expression
+      // // immediately invoke function expression
       // (function test() {
       //   for (var i = 0; i < 10; i++) {
       //     console.log(i);

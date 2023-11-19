@@ -9,10 +9,12 @@
     <script>
       const angka = [1, -4, 4, 3, 6, 9, -5, 7, 5, -6];
 
-      // filter
+      // -----------------------------------------------------------------------------------------------------
+      // 1. filter
       // angka >= 3
 
       // for loop
+
       // const lebihTiga = [];
       // for (let i = 0; i < angka.length; i++) {
       //   if (angka[i] >= 3) {
@@ -22,19 +24,22 @@
       // console.log(lebihTiga);
 
       // filter
+
       // const lebihTiga = angka.filter(n => n >= 3);
       // console.log(lebihTiga);
 
       // -----------------------------------------------------------------------------------------------------
-      // map
+      // 2. map
       // angka * 2
+
       // const kaliTiga = angka.map(n => n * 2);
       // console.log(angka)
       // console.log(kaliTiga);
 
       // -----------------------------------------------------------------------------------------------------
-      // reduce
+      // 3. reduce
       // jumlah
+
       // const jumlah = angka.reduce(
       //   (accumulator, currentValue) => accumulator + currentValue,
       //   0
@@ -42,9 +47,10 @@
       // console.log(jumlah);
 
       // -----------------------------------------------------------------------------------------------------
-      // method chaining
+      // 4. method chaining
       // (angka > 5) * 3
       // jumlah
+      
       const total = angka
         .filter((a) => a > 5) // 6, 9, 7
         .map((b) => b * 3) // 18, 27, 21

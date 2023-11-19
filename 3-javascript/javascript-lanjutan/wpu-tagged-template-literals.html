@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tagged Template Literals</title>
+    <style>
+      .hl {
+        background-color: salmon;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // tagged template literals
+
+      // const nama = "Irfan Yahya Abdillah";
+      // const umur = 24;
+
+      // function coba(strings, ...values) {
+      //   // let result = "";
+      //   // strings.forEach((str, i) => {
+      //   //   result += `${str}${values[i] || ""}`;
+      //   // });
+      //   // return result;
+
+      //   return strings.reduce(
+      //     (result, str, i) => `${result}${str}${values[i] || ""}`,
+      //     ""
+      //   );
+      // }
+
+      // const str = coba`Halo, nama saya ${nama}, saya ${umur} tahun.`;
+      // console.log(str);
+
+      // -----------------------------------------------------------------------------------------------------
+      // contoh
+
+      const nama = "Irfan Yahya Abdillah";
+      const umur = 24;
+      const email = "irfanyahyaa@gmail.com";
+
+      function highlight(strings, ...values) {
+        return strings.reduce(
+          (result, str, i) =>
+            `${result}${str}<span class="hl">${values[i] || ""}</span>`,
+          ""
+        );
+      }
+
+      const str = highlight`Halo, nama saya ${nama}, saya ${umur} tahun, dan email saya adalah ${email}`;
+      document.body.innerHTML = str;
+    </script>
+  </body>
+</html>

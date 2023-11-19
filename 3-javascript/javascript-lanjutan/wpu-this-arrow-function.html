@@ -34,7 +34,8 @@
     <div class="box"></div>
 
     <script>
-      // this pada constructor function
+      // 1. this pada constructor function
+
       // const Mahasiswa = function () {
       //   this.nama = "Irfan";
       //   this.umur = 24;
@@ -58,7 +59,8 @@
       // const Irfan = new Mahasiswa();
 
       // -----------------------------------------------------------------------------------------------------
-      // this pada object literals
+      // 2. this pada object literals
+
       // const mhs1 = {
       //   nama: "Irfan",
       //   umur: 24,
@@ -71,7 +73,8 @@
       // };
 
       // -----------------------------------------------------------------------------------------------------
-      // this pada function declaration
+      // 3. this pada function declaration
+
       // const Mahasiswa = function () {
       //   this.nama = "Irfan";
       //   this.umur = 24;
@@ -89,7 +92,8 @@
       // const Irfan = new Mahasiswa();
 
       // -----------------------------------------------------------------------------------------------------
-      // contoh
+      // 4. contoh
+
       class Person {
         constructor(name) {
           this.name = name;
@@ -116,7 +120,8 @@
       console.log(this.name); // window
 
       // -----------------------------------------------------------------------------------------------------
-      // contoh
+      // 5. contoh
+      
       const box = document.querySelector(".box");
 
       box.addEventListener("click", function () {
