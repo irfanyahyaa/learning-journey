@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Assignment</title>
+  </head>
+  <body>
+    <script>
+      // 1. array
+
+      // const coba = ["satu", "dua", "tiga"];
+
+      // const [a, b, c] = coba;
+      // console.log(a); // "satu"
+      // console.log(b); // "dua"
+      // console.log(c); // "tiga"
+
+      // -----------------------------------------------------------------------------------------------------
+      // 2. skip items
+
+      // const silent = ["Haruna", "Kawaguchi", "Ren", "Meguro"];
+
+      // const [, aoba, sou] = silent;
+      // console.log(sou);
+
+      // -----------------------------------------------------------------------------------------------------
+      // 3. swap items
+
+      // let a = 1;
+      // let b = 2;
+      // let c = 3
+
+      // console.log(a);
+
+      // [a, b, c] = [c, a, b];
+
+      // console.log(a);
+
+      // -----------------------------------------------------------------------------------------------------
+      // 4. return value
+
+      // function silent() {
+      //   return ["Haruna", "Kawaguchi"];
+      // }
+
+      // const [tsumugi, aoba] = silent();
+      // console.log(tsumugi);
+
+      // -----------------------------------------------------------------------------------------------------
+      // 5. rest params
+
+      // const [a, b, ...values] = [1, 2, 3, 4, 5, 6, 7];
+
+      // console.log(a);
+      // console.log(b);
+      // console.log(values);
+
+      // -----------------------------------------------------------------------------------------------------
+      // 6. object
+
+      // const mhs = {
+      //   nama: "Irfan Yahya Abdillah",
+      //   umur: 24,
+      // };
+
+      // const { nama, umur } = mhs;
+      // console.log(nama); // "Irfan Yahya Abdillah"
+      // console.log(umur); // 24
+
+      // const { a, b } = mhs;
+      // console.log(a); // undefined
+      // console.log(b); // undefined
+
+      // -----------------------------------------------------------------------------------------------------
+      // 7. w/o declare object
+
+      // ({ nama, umur } = { nama: "Irfan Yahya Abdillah", umur: 24 });
+
+      // console.log(nama);
+      // console.log(umur);
+
+      // -----------------------------------------------------------------------------------------------------
+      // 8. assign new variable
+
+      // const mhs = {
+      //   nama: "Irfan Yahya Abdillah",
+      //   umur: 24,
+      // };
+
+      // const { nama: n, umur: u } = mhs;
+      // console.log(n); // "Irfan Yahya Abdillah"
+      // console.log(nama); // error
+
+      // -----------------------------------------------------------------------------------------------------
+      // 9. default value
+
+      // const mhs = {
+      //   nama: "Irfan Yahya Abdillah",
+      //   umur: 24,
+      //   // email: "irfanyahyaa@gmail.com"
+      // };
+
+      // const { nama, umur, email = "default@email.com" } = mhs;
+      // console.log(email); // "irfanyahyaa@gmail.com" : "default@email.com"
+
+      // -----------------------------------------------------------------------------------------------------
+      // contoh
+
+      // const mhs = {
+      //   nama: "Irfan Yahya Abdillah",
+      //   umur: 24,
+      //   email: "irfanyahyaa@gmail.com"
+      // };
+
+      // const { nama: n, umur: u, email: e = "default@email.com" } = mhs;
+      // console.log(e); // "irfanyahyaa@gmail.com" : "default@email.com"
+      // console.log(email); // error
+
+      // -----------------------------------------------------------------------------------------------------
+      // contoh
+
+      // const mhs = {
+      //   nama: "Irfan Yahya Abdillah",
+      //   umur: 24,
+      //   email: "irfanyahyaa@gmail.com",
+      // };
+
+      // const { nama, ...values } = mhs;
+      // console.log(nama); // "Irfan Yahya Abdillah"
+      // console.log(values); // rest params
+
+      // -----------------------------------------------------------------------------------------------------
+      // contoh
+      
+      const mhs = {
+        id: 17,
+        nama: "Irfan Yahya Abdillah",
+        umur: 24,
+        email: "irfanyahyaa@gmail.com",
+      };
+
+      function getIdMhs({ id, nama }) {
+        // return id; // id atau nama
+        return umur; // error
+      }
+
+      console.log(getIdMhs(mhs));
+    </script>
+  </body>
+</html>
