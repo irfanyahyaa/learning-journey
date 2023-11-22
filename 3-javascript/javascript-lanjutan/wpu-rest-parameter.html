@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Parameter</title>
+  </head>
+  <body>
+    <script>
+      // rest parameter
+
+      // function myFunction() {
+      //   // return `a = ${a}, b = ${b}, myArgs = ${myArgs}`;
+      //   // return myArgs; // array
+      //   // return arguments; // bukan array
+      //   // return Array.from(arguments); // array
+      //   return [...arguments]; // array
+      // }
+
+      // console.log(myFunction(1, 2, 3, 4, 5));
+
+      // -----------------------------------------------------------------------------------------------------
+      // 1. contoh
+
+      // function jumlahkan(...angka) {
+      //   // let total = 0;
+
+      //   // // for..loop
+      //   // // for (let i = 0; i <script angka.length; i++) {
+      //   // //   total += angka[i];
+      //   // // } // 15
+
+      //   // // for..of
+      //   // for (const a of angka) {
+      //   //   total += a;
+      //   // } // 15
+
+      //   // return total;
+
+      //   // reduce
+      //   return angka.reduce((accu, curr) => accu + curr, 0); // 15
+      // }
+
+      // console.log(jumlahkan(1, 2, 3, 4, 5));
+
+      // -----------------------------------------------------------------------------------------------------
+      // 2. array destructuring
+
+      // const kelompok1 = ["Irfan", "Yahya", "Abdillah", "Afif", "Husna"];
+
+      // // traditional
+      // // const ketua = kelompok1[0];
+      // // const wakil = kelompok1[1];
+      // // const anggota = [kelompok1[2], kelompok1[3], kelompok1[4]];
+
+      // // destructuring
+      // const [ketua, wakil, ...anggota] = kelompok1;
+
+      // console.log(`Ketua: ${ketua}, Wakil: ${wakil}, Anggota: ${anggota}`);
+
+      // -----------------------------------------------------------------------------------------------------
+      // 3. object destructuring
+
+      // const team = {
+      //   pm: "Irfan",
+      //   fe1: "Yahya",
+      //   fe2: "Abdillah",
+      //   be: "Zada",
+      //   ux: "Mumtazul",
+      //   devops: "Afif",
+      // };
+
+      // const { pm, ...myTeam } = team;
+      // console.log(pm);
+      // console.log(myTeam);
+
+      // -----------------------------------------------------------------------------------------------------
+      // 4. filtering
+
+      function filterBy(type, ...values) {
+        return values.filter((v) => typeof v === type); // array
+      }
+
+      console.log(filterBy("boolean", 1, 2, "Irfan", false, 53, true, "Yahya"));
+    </script>
+  </body>
+</html>
