@@ -49,7 +49,7 @@
       // console.log(kurang);
 
       // -----------------------------------------------------------------------------------------------------
-      // 4. destructuring aguments
+      // 4. destructuring arguments
 
       // const mhs1 = {
       //   nama: "Irfan Yahya Abdillah",
@@ -75,20 +75,37 @@
 
       // console.log(cetakMhs(mhs1));
 
+      // const mhs1 = {
+      //   nama: "Irfan Yahya Abdillah",
+      //   umur: 24,
+      //   email: "irfanyahyaa@gmail.com",
+      // };
+
+      // function cetakMhs({ nama, umur }) {
+      //   return `Halo, nama saya ${nama}, saya ${umur} tahun.`;
+      // }
+
+      // console.log(cetakMhs(mhs1));
+
+      // -----------------------------------------------------------------------------------------------------
+      // 5. destructuring arguments object
+
       const mhs1 = {
         nama: "Irfan Yahya Abdillah",
         umur: 24,
         email: "irfanyahyaa@gmail.com",
+        mataKuliah: {
+          tugas: 88,
+          uts: 75,
+          uas: 95,
+        },
       };
 
-      function cetakMhs({ nama, umur }) {
-        return `Halo, nama saya ${nama}, saya ${umur} tahun.`;
+      function cetakMhs({ nama, umur, mataKuliah: { tugas, uts, uas } }) {
+        return `Halo, nama saya ${nama}, saya ${umur} tahun. Dan nilai Tugas saya adalah: ${tugas}`;
       }
 
       console.log(cetakMhs(mhs1));
-
-      // -----------------------------------------------------------------------------------------------------
-      //
     </script>
   </body>
 </html>
