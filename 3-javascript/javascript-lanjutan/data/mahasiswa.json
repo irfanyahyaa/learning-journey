@@ -1,0 +1,23 @@
+[
+  {
+    "nama": "Irfan Yahya Abdillah",
+    "nrp": "01234567",
+    "email": "irfan@email.com",
+    "jurusan": "Agribisnis",
+    "idDosenWali": 1
+  },
+  {
+    "nama": "Zada Mumtazul Afif",
+    "nrp": "78901234",
+    "email": "afif@email.com",
+    "jurusan": "Ekonomi",
+    "idDosenWali": 2
+  },
+  {
+    "nama": "Zafira Husna Amina",
+    "nrp": "78904321",
+    "email": "husna@email.com",
+    "jurusan": "IPA",
+    "idDosenWali": 2
+  }
+]

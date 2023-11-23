@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asynchronus, Callback</title>
+  </head>
+  <body>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // 1. callback
+
+      // function halo(nama) {
+      //   alert(`Halo ${nama}`);
+      // }
+
+      // function tampilkanPesan(callback) {
+      //   const nama = prompt("Masukkan Nama : ");
+      //   callback(nama);
+      // }
+
+      // tampilkanPesan((nama) => alert(`Halo ${nama}`));
+
+      // -----------------------------------------------------------------------------------------------------
+      // 2. contoh
+      // synchronus callback
+
+      // const mhs = [
+      //   {
+      //     nama: "Irfan Yahya Abdillah",
+      //     nrp: "01234567",
+      //     email: "irfan@email.com",
+      //     jurusan: "Agribisnis",
+      //     idDosenWali: 1,
+      //   },
+      //   {
+      //     nama: "Zada Mumtazul Afif",
+      //     nrp: "78901234",
+      //     email: "afif@email.com",
+      //     jurusan: "Ekonomi",
+      //     idDosenWali: 2,
+      //   },
+      //   {
+      //     nama: "Zafira Husna Amina",
+      //     nrp: "78904321",
+      //     email: "husna@email.com",
+      //     jurusan: "IPA",
+      //     idDosenWali: 2,
+      //   },
+      // ];
+
+      // console.log("mulai");
+      // mhs.forEach((m) => console.log(m.nama));
+      // console.log("selesai");
+
+      // -----------------------------------------------------------------------------------------------------
+      // 3. contoh
+      // asynchronus callback
+
+      // function getDataMahasiswa(url, success, error) {
+      //   // AJAX
+      //   let xhr = new XMLHttpRequest(); // object AJAX
+
+      //   // request AJAX (async)
+      //   xhr.onreadystatechange = function () {
+      //     if (xhr.readyState === 4) {
+      //       // 4 = ready
+      //       if (xhr.status === 200) {
+      //         // 200 = ok
+      //         success(xhr.response);
+      //       } else if (xhr.status === 404) {
+      //         // 404 = page not found
+      //         error();
+      //       }
+      //     }
+      //   };
+
+      //   xhr.open("get", url);
+      //   xhr.send();
+      // }
+
+      // console.log("mulai");
+      // getDataMahasiswa(
+      //   "data/mahasiswa.json",
+      //   (result) => {
+      //     const mhs = JSON.parse(result);
+      //     mhs.forEach((m) => {
+      //       console.log(m.nama);
+      //     });
+      //   },
+      //   () => {}
+      // );
+      // console.log("selesai");
+
+      // -----------------------------------------------------------------------------------------------------
+      // 4. contoh
+      // jquery
+
+      console.log("mulai");
+      $.ajax({
+        // $ = jquery
+        url: "data/mahasiswa.json",
+        success: (mhs) => {
+          mhs.forEach((m) => {
+            console.log(m.nama);
+          });
+        },
+        error: (e) => {
+          console.log(e.responseText);
+        },
+      });
+      console.log("selesai");
+    </script>
+  </body>
+</html>
